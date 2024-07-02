@@ -1,0 +1,60 @@
+@import '../../../styles.scss';
+
+.main {
+    height: 100vh;
+    background-color: $primary-color;
+    position: relative;
+    display: flex;
+}
+
+.twins {
+    height: 750px;
+    width: 850px;
+}
+
+.left-frame, .right-frame {
+    padding-top: 109px;
+}
+
+.layer1 {
+    position: relative;
+    z-index: 1;
+}
+
+.right-frame {
+    position: relative;
+    left: -200px;
+}
+
+.headline-container {
+    @include flexParams(center,center);
+    >span {
+        transform: rotate(-180deg);
+        color: white;
+        writing-mode: vertical-lr;
+        font-size: 64px;        
+    }    
+}
+
+h1 {
+    color: white;
+    font-size: 90px;  
+    white-space: nowrap; 
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: $dark-blue;
+    font-size: 58px;
+    white-space: nowrap;  
+    line-height: 1;
+}
+
+.banner {
+    position: absolute;
+    bottom: -400px;
+    left: 0;    
+    height: 900px;
+    width: 100%;       
+}
