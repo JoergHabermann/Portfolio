@@ -1,0 +1,50 @@
+@import '../../../styles.scss';
+
+.main {    
+    background-color: $primary-color;
+    padding: 150px 0px 300px 100px;
+    
+
+}
+
+h1 {
+    color: white;
+    font-size: 90px;  
+    white-space: nowrap; 
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+}
+
+.left-frame {
+    position: relative;
+    z-index: 1;
+}
+
+.text-container {    
+    @include flexParams(flex-end,flex-start);
+    gap: 35px;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 35px;
+    
+}
+
+.personal {
+    
+    >div {
+        @include flexParams(flex-start,flex-end);
+        gap: 35px;
+        margin-bottom: 35px;
+        >img {
+            transition: all 75ms ease-in-out;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
