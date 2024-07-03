@@ -10,7 +10,15 @@ header {
         width: 100%;  
         >span {
             color: white;
-        }     
+            font-weight: 700;   
+            font-size: 40px;         
+            >span:last-child {
+                color: $light-blue;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }            
     }    
 }
 
