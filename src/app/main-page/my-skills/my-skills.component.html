@@ -1,1 +1,21 @@
-<p>my-skills works!</p>
+<div class="main">
+  <div class="left-frame">
+    <!-- <div class="overflow-wrapper">
+      <img src="" alt="" />
+    </div> -->
+    <div class="skill" *ngFor="let skill of skills;" > <img [src]="skill.pic" alt="pic" /><span>{{ skill.name }}</span></div>
+  </div>
+  <div class="right-frame">
+    <div>
+      <h1>My skills</h1>
+      <p>
+        I have grown my frontend developments skills that have allowed me to
+        create different real projects.
+      </p>
+      <div class="buttoncontainer">
+        <button>Get in touch</button>
+      </div>
+    </div>
+    <div class="blue-line"></div>
+  </div>
+</div>

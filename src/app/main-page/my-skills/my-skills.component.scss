@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+
+.main {   
+    @include flexParams(center,space-between);
+    background-color: $primary-color;
+    padding: 150px 0px 150px 100px;
+}
+
+h1 {
+    color: white;
+    font-size: 90px;  
+    white-space: nowrap; 
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+p, span {
+    color: white;
+    font-size: 16px;
+}
+
+.skill {
+    @include flexParams(center,center);
+    flex-direction: column;
+    gap: 10px;  
+    width: 88px;
+    height: 100px;  
+}
+
+.left-frame {
+    @include flexParams(center,flex-start);
+    gap: 120px;
+    flex-wrap: wrap;
+    max-width: 750px;
+}
