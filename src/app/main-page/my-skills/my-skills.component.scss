@@ -3,7 +3,7 @@
 .main {   
     @include flexParams(center,space-between);
     background-color: $primary-color;
-    padding: 150px 0px 150px 100px;
+    padding: 100px 0px 150px 100px;
 }
 
 h1 {
@@ -21,15 +21,74 @@ p, span {
 
 .skill {
     @include flexParams(center,center);
+    position: relative;
+    z-index: 1;
     flex-direction: column;
     gap: 10px;  
     width: 88px;
-    height: 100px;  
+    height: 100px;
+    margin-bottom: 54px;
+    margin-right: 120px;
+    >img {
+        transition: all 75ms ease-in-out;
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
 }
 
 .left-frame {
-    @include flexParams(center,flex-start);
-    gap: 120px;
-    flex-wrap: wrap;
-    max-width: 750px;
+    @include flexParams(center,flex-start);    
+    flex-wrap: wrap;    
+    position: relative;       
+    >div:last-child {
+        >span {
+            text-align: center;
+        }
+    } 
+}
+
+.right-frame {
+    @include flexParams(center,center);
+    gap: 42px;
+    >div {
+        @include flexParams(center,center);
+        flex-direction: column;
+          
+        >h1 {
+            align-self: flex-end;
+        }         
+        >p {
+            margin-top: 34px; 
+            text-align: end;                      
+        }
+        >div {            
+            width: 100%;
+            >button {
+            position: relative;
+            left: 30px;
+            }
+        }      
+    }   
+}
+
+.overflow-wrapper {    
+    overflow-x: hidden;
+    position:absolute;
+    left: -100px;
+    top: 100px;    
+    >img {        
+        position: relative;
+        left: -550px;        
+        transform: rotateX(180deg);
+    }
+}
+
+.blue-line {
+    position: relative;
+    top: -135px;
+    height: 4px;
+    width: 100px;
+    background-color: $dark-blue;
+    border-radius: 4px;
 }
