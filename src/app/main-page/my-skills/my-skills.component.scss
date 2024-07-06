@@ -14,11 +14,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-p, span {
-    color: white;
-    font-size: 16px;
-}
-
 .skill {
     @include flexParams(center,center);
     position: relative;
@@ -40,7 +35,8 @@ p, span {
 .left-frame {
     @include flexParams(center,flex-start);    
     flex-wrap: wrap;    
-    position: relative;       
+    position: relative; 
+    max-width: 1000px;      
     >div:last-child {
         >span {
             text-align: center;
@@ -51,22 +47,22 @@ p, span {
 .right-frame {
     @include flexParams(center,center);
     gap: 42px;
+    
     >div {
-        @include flexParams(center,center);
+        @include flexParams(flex-end,center);
         flex-direction: column;
-          
+        max-width: 600px;  
         >h1 {
             align-self: flex-end;
         }         
         >p {
             margin-top: 34px; 
-            text-align: end;                      
+            text-align: end;                 
         }
         >div {            
-            width: 100%;
+            width: 395px; 
             >button {
-            position: relative;
-            left: 30px;
+            position: relative;            
             }
         }      
     }   
@@ -88,7 +84,7 @@ p, span {
     position: relative;
     top: -135px;
     height: 4px;
-    width: 100px;
+    width: 58px;
     background-color: $dark-blue;
     border-radius: 4px;
 }

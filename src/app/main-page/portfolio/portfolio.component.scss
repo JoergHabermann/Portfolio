@@ -1,0 +1,39 @@
+@import '../../../styles.scss';
+
+.main {
+    @include flexParams(center,flex-start);
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 100px 0px 150px 100px;
+}
+
+h1 {
+    color: white;
+    font-size: 90px;  
+    white-space: nowrap; 
+    line-height: 1;
+}
+
+.headcontainer {
+    @include flexParams(flex-start,flex-start);
+    flex-direction: column;   
+    align-self: flex-end;
+    >div {
+        @include flexParams(center, flex-start);
+        gap: 40px;
+        margin-bottom: 35px;
+    } 
+}
+
+.short-line {
+    width: 109px;
+    height: 4px;
+    background-color: $dark-blue;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.long-line {
+    width: 484px;
+    height: 4px;
+    background-color: $dark-blue;    
+}

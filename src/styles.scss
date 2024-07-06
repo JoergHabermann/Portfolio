@@ -39,6 +39,11 @@
     right: 0;
   }
 
+  p, span {
+    color: white;
+    font-size: 16px;
+  }
+
   .buttoncontainer {
     @include flexParams(flex-start,center);
     height: 130px;
