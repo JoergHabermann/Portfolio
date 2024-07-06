@@ -1,1 +1,17 @@
-<p>project works!</p>
+<div class="main" [ngClass]="{'reverse': !picleft}">
+    <div class="image-frame" *ngIf="picleft">
+      <img [src]="image" alt="image">
+    </div>
+    <div class="description-frame">        
+      <h2>{{ title }}</h2>
+      <span>{{ skills }}</span>
+      <p>{{ description }}</p>        
+      <div class="buttonbucket">
+        <button>Live test</button>
+        <button>Github</button>
+      </div>
+    </div>
+    <div class="image-frame" *ngIf="!picleft">
+      <img [src]="image" alt="image">
+    </div>
+</div>
