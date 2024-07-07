@@ -1,0 +1,76 @@
+@import '../../../styles.scss';
+
+.main {
+    background-color: $primary-color;
+    position: relative;
+    @include flexParams(flex-start,flex-start);
+    flex-direction: column;
+    padding: 150px 100px 50px 0px;
+    >div:first-child {
+        @include flexParams(center,center);
+        align-self: flex-start;
+        gap: 50px;
+    }
+    >div:last-child {
+        @include flexParams(center,space-between);
+        padding-left: 100px;
+        width: 100%;
+    }
+}
+
+h1 {
+    color: white;
+    font-size: 90px;  
+    white-space: nowrap; 
+    line-height: 1;    
+}
+
+.blue-line {
+    height: 4px;
+    width: 50px;
+    border-radius: 4px;
+    background-color: $dark-blue;
+}
+
+.text-frame {
+    @include flexParams(flex-start,center); 
+    flex-direction: column; 
+    gap: 25px;
+    max-width: 470px;
+    >h2 {
+        font-size: 32px;
+        color: white;  
+        margin-bottom: 10px;  
+    }
+}
+
+.contact-frame {
+    @include flexParams(flex-start,center);
+    flex-direction: column;
+    width: 620px;
+    height: 550px;
+    >form {
+        @include flexParams(center,center);
+        flex-direction: column;   
+        width: 100%; 
+        
+        
+    }
+}
+
+.contact-input {
+    width: 100%;
+    background-color: transparent;
+    border: solid 1px $dark-blue;
+    border-radius: 10px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: white;
+}
+
+
