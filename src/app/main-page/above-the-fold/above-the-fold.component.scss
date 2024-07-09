@@ -5,7 +5,8 @@
     background-color: $primary-color;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
+    
 }
 
 .twins {
@@ -35,6 +36,7 @@
 .center-section {
     @include flexParams(center,center);
     width: 100%;
+    
 }
 
 .right-frame {
@@ -53,10 +55,6 @@
         font-size: 64px;        
     }    
 }
-
-
-
-
 
 h1 {
     color: white;

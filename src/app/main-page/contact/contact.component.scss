@@ -5,7 +5,9 @@
     position: relative;
     @include flexParams(flex-start,flex-start);
     flex-direction: column;
-    padding: 150px 100px 50px 0px;
+    overflow-y:hidden;
+    gap: 85px;
+    padding: 150px 100px 150px 0px;
     >div:first-child {
         @include flexParams(center,center);
         align-self: flex-start;
@@ -33,10 +35,12 @@ h1 {
 }
 
 .text-frame {
-    @include flexParams(flex-start,center); 
+    @include flexParams(flex-start,flex-start); 
     flex-direction: column; 
+    position: relative;
     gap: 25px;
     max-width: 470px;
+    height: 550px;
     >h2 {
         font-size: 32px;
         color: white;  
@@ -45,17 +49,45 @@ h1 {
 }
 
 .contact-frame {
-    @include flexParams(flex-start,center);
+    @include flexParams(flex-start,flex-start);
     flex-direction: column;
     width: 620px;
     height: 550px;
     >form {
-        @include flexParams(center,center);
+        @include flexParams(flex-start,center);
         flex-direction: column;   
-        width: 100%; 
-        
-        
+        width: 100%;         
+        >div:last-child {
+            margin-top: 32px;
+            width: 100%;
+            height: 110px;
+        }        
     }
+    >img {
+      align-self: flex-end;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0) saturate(100%) invert(74%) 
+        sepia(42%) saturate(5821%) hue-rotate(147deg) 
+        brightness(94%) contrast(101%);
+      }
+    }
+}
+
+.policy-container {
+  @include flexParams(center,center);
+  >label {            
+      color: white;
+      font-size: 14px;            
+      >a {
+          text-decoration: none;
+          color: $dark-blue;
+          margin: 6px;
+          &:hover {
+              text-decoration: underline;
+          }
+      }
+  }
 }
 
 .contact-input {
@@ -67,10 +99,83 @@ h1 {
     color: white;
     font-size: 16px;
     margin-bottom: 32px;
+    &:hover {
+        cursor: pointer;
+        border-color: $light-blue;
+    }
 }
 
 input::placeholder, textarea::placeholder {
     color: white;
 }
 
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.checkbox-container {
+  @include flexParams(center,center);
+  cursor: pointer;
+  font-size: 14px;  
+  position: relative;
+  left: -5px;
+  z-index: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgba(75, 71, 255,0.5);    
+  }
+
+  input {
+    position: absolute;        
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    appearance: none;
+    z-index: 2;
+
+    &:checked + .checkmark {      
+      &:after {
+        display: block;    
+      }  
+    }    
+  }
+
+  .checkmark {
+    position: relative;    
+    height: 18px;
+    width: 18px;
+    border: 2px solid $light-blue;
+    background-color: transparent;
+    transition: border-color 75ms ease-in-out;
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border: solid $light-blue;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      z-index: 1;
+    }   
+  }  
+}
+
+  .image-wrapper {
+    position: absolute;
+    left: -450px;
+    bottom: -520px;    
+    >img {
+      transform: rotate(-100deg);
+    }
+  }
 

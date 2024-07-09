@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+
+.main {
+    background-color: $primary-color;    
+    @include flexParams(center,center);
+    flex-direction: column;    
+    padding: 120px 100px 100px 100px;  
+    border-top: solid 4px $light-blue;  
+}

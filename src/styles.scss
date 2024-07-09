@@ -23,6 +23,8 @@
   $primary-color: #141D2F;
   $dark-blue: #4B47FF;
   $light-blue: #00BEE8;
+  $disabled: #B6B6B6;
+
 
   * {
     margin: 0;
@@ -56,15 +58,18 @@
         border-radius: 10px;
         color: white;
         transition: all 75ms ease-in-out;
-        &:hover {
+        &:not(:disabled):hover {
             padding: 20px 40px;
             cursor: pointer;
             background-color: $dark-blue;
         }
-        &:active {
+        &:not(:disabled):active {
             padding: 15px 30px;
             background-color: white;
-            color: black;
+            color: $dark-blue;
+        }
+        &:disabled {
+          background-color: $disabled;
         }
     }
 }
