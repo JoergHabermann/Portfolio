@@ -19,7 +19,16 @@ header {
             &:hover {
                 cursor: pointer;
             }
-        }            
+        }  
+        >img {
+            display:none;
+            &:hover {
+                cursor: pointer;
+                filter: brightness(0) saturate(100%) invert(74%) 
+                sepia(42%) saturate(5821%) hue-rotate(147deg) 
+                brightness(94%) contrast(101%);
+            }
+        }          
     }    
 }
 
@@ -36,4 +45,19 @@ nav {
         }
 
     }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        display: none;        
+    }
+    header>div>img {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 0px 25px;
+    }    
 }
