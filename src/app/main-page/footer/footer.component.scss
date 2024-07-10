@@ -5,5 +5,54 @@
     @include flexParams(center,center);
     flex-direction: column;    
     padding: 120px 100px 100px 100px;  
-    border-top: solid 4px $light-blue;  
+    border-top: solid 4px $light-blue;
+    >div {
+        @include flexParams(center,space-between);
+        width: 100%;
+        >div:first-child {
+            @include flexParams(flex-start,center);
+            flex-direction: column;
+            >span {
+                color: white;
+                font-weight: 700;   
+                font-size: 56px;         
+                >span:last-child {
+                    color: $light-blue;
+                    font-size: 56px;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            >a {
+                text-decoration: none;
+                color:white;
+                font-size: 16px;
+                position: relative;
+                &:hover {
+                    &::after {
+                        content: "";
+                        position:absolute;
+                        bottom:-2px;
+                        left:0;
+                        width:55px;
+                        border-bottom:2px solid $light-blue;                       
+                    }
+
+                }
+            }
+        }
+        >span {
+            font-size: 23px;
+        }
+        >div:last-child {
+            @include flexParams(center,space-between);
+            width: 175px;
+            >a {
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }  
 }
