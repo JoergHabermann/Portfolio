@@ -4,10 +4,11 @@ header {
     height: 109px;
     padding: 0px 100px;
     background-color: $primary-color;
-    @include flexParams(center,center);
+    @include flexParams(center,flex-start);
+    width: 100%;
     >div {
         @include flexParams(center,space-between); 
-        width: 100%;  
+        width: 100%;
         >span {
             color: white;
             font-weight: 700;   

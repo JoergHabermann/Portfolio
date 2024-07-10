@@ -2,11 +2,11 @@
 
 .main {
     height: 100vh;
+    max-height: 1000px;
     background-color: $primary-color;
     position: relative;
-    display: flex;
+    @include flexParams(center,flex-end);
     flex-direction: column;    
-    
 }
 
 .twins {
@@ -28,15 +28,10 @@
         top: 0;
     }
 }
-.layer1 {
-    position: relative;
-    z-index: 1;
-}
 
 .center-section {
     @include flexParams(center,center);
-    width: 100%;
-    
+    width: 100%;    
 }
 
 .right-frame {
@@ -72,12 +67,19 @@ h2 {
     line-height: 1;
 }
 
-.banner {
+.banner-wrapper {
     position: absolute;
     bottom: -400px;
-    left: 0;    
-    height: 900px;
-    width: 100%;       
+    right: 0;    
+    height: 910px;
+    width: 100%;
+    overflow-x: hidden;
+    >img {        
+        width: 100%;    
+        min-width: 768px;    
+        height: 900px;
+        
+    }       
 }
 
 .link-it {
@@ -86,6 +88,7 @@ h2 {
     position: relative;
     z-index: 1;
     top: -50px;
+    width: 100%;
     >div {
         @include flexParams(center,center);
         gap: 42px;
@@ -120,4 +123,18 @@ h2 {
             transform: rotate(-90deg);
         }
     }    
+}
+
+@media only screen and (max-width:1600px) {
+    .headline-container {
+        >span {
+            font-size: 48px; 
+        }
+        >div>h1 {
+            font-size: 69px;
+        }
+        >div>h2 {
+            font-size: 44px;
+        }
+    }
 }

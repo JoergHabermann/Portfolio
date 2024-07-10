@@ -1,11 +1,12 @@
 @import '../../../styles.scss';
 
-.main {
+footer {
     background-color: $primary-color;    
     @include flexParams(center,center);
     flex-direction: column;    
     padding: 120px 100px 100px 100px;  
     border-top: solid 4px $light-blue;
+    width: 100%;
     >div {
         @include flexParams(center,space-between);
         width: 100%;
