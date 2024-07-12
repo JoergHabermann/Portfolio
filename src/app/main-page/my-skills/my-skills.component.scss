@@ -88,3 +88,41 @@ h1 {
     background-color: $dark-blue;
     border-radius: 4px;
 }
+
+@media only screen and (max-width: 1240px) {
+    .right-frame>div:first-child {
+        max-width: 350px;    
+        >h1 {
+            font-size: 72px;
+        }
+        >div:last-child {
+            width: 90%;
+        }
+    }   
+}
+
+@media only screen and (max-width: 950px) {
+    .main {
+        flex-direction: column-reverse;    
+        padding-top: 30px;   
+        position: relative; 
+    }
+    .right-frame {
+        align-self: flex-end;
+        >div:first-child>div {
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    .left-frame {
+        padding-left:10%;
+    }
+    .overflow-wrapper {
+        max-width: 300px;
+        top: -350px;
+        >img {
+            left: -600px;
+        }
+    }
+}
