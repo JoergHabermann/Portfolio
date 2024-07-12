@@ -55,6 +55,9 @@ nav {
     header>div>img {
         display: block;
     }
+    header {
+        padding: 0px 50px;
+    }  
 }
 
 @media only screen and (max-width: 480px) {
