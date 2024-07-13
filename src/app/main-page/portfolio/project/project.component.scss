@@ -74,3 +74,65 @@
         }    
     }   
 }
+
+@media only screen and (max-width: 1220px) {
+    .main {
+        flex-direction: column;
+        left: 0;
+        gap: 0;
+        .description-frame {
+            align-items: center;
+            p {
+                text-align: center;
+            }
+            span {
+                text-align: center;    
+            }
+        }
+        
+        &.reverse {
+            flex-direction: column-reverse;
+            left: 0;
+            gap: 0;
+            .description-frame {
+                align-items: center;
+                p {
+                    text-align: center;
+                }
+                span {
+                    text-align: center;    
+                }
+            }
+        }
+    }    
+}
+
+@media only screen and (max-width: 620px) {
+    .main {        
+        .description-frame {
+            width: 280px;    
+        }        
+        &.reverse {            
+            .description-frame {
+                align-items: center;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }   
+    .buttonbucket {
+        gap: 20px;
+        button {
+            font-size: 16px !important;
+        }
+    }
+    .image-frame {
+        width: 300px;
+        >img {
+            height: 250px;
+            width: auto;
+        }
+    }   
+}
+

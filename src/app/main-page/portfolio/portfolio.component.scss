@@ -68,3 +68,68 @@ h1 {
         left: 30px;
     }
 }
+
+@media only screen and (max-width: 1220px) {
+    .long-line {
+        width: 384px;
+    }
+    .first-image-wrapper {        
+        top: 650px;
+        >img {
+            height: 700px;
+        }
+    }
+    h1 {
+        font-size: 72px;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .long-line {
+        width: 184px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .short-line {
+        width: 30px;
+    }
+    h1 {
+        font-size: 56px;
+    }
+    .headcontainer {
+        max-width: 450px;
+        >p {
+            word-break: break-word;
+        }
+        >div {
+            gap: 25px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 620px) {
+    .projectcontainer {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .short-line {
+        width: 15px;
+    }
+    .long-line {
+        width: 45px;
+    }
+    .headcontainer {
+        width: 275px;
+        >div {
+            gap: 10px;
+        }
+    }
+    h1 {
+        font-size: 45px;
+    }
+    
+}
