@@ -4,6 +4,7 @@
     @include flexParams(center,space-between);
     background-color: $primary-color;
     padding: 100px 0px 250px 100px;
+    position: relative;
 }
 
 h1 {
@@ -72,10 +73,10 @@ h1 {
     overflow-x: hidden;
     position:absolute;
     left: -100px;
-    top: 100px;    
+    top: 200px;    
     >img {        
         position: relative;
-        left: -550px;        
+        left: -450px;        
         transform: rotateX(180deg);
     }
 }
@@ -90,39 +91,115 @@ h1 {
 }
 
 @media only screen and (max-width: 1240px) {
-    .right-frame>div:first-child {
-        max-width: 350px;    
-        >h1 {
-            font-size: 72px;
-        }
-        >div:last-child {
-            width: 90%;
-        }
-    }   
-}
-
-@media only screen and (max-width: 950px) {
     .main {
         flex-direction: column-reverse;    
-        padding-top: 30px;   
+        padding: 30px 0px 150px 0px;   
         position: relative; 
     }
     .right-frame {
         align-self: flex-end;
-        >div:first-child>div {
-            position:absolute;
-            bottom: 0;
-            width: 100%;
+        margin-bottom: 100px;        
+        >div:first-child {
+            max-width: 550px;
+            >h1 {
+                font-size: 72px;
+            }
+            >div:last-child {
+                position:absolute;
+                bottom: 0;
+                left: 0;  
+                margin-top: 55px;                          
+                width: 100%;
+            }
+    }
+    }
+    .blue-line {
+        top: -45px;
+    }
+     .left-frame {
+        left: 88px;
+        max-width: 832px;
+    }   
+    
+}
+
+@media only screen and (max-width: 848px) {
+    .left-frame {
+        max-width: 624px;
+    }
+    .overflow-wrapper {
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .skill {
+        margin-right: 70px;
+        margin-bottom: 32px;
+        >img {
+            transform: scale(0.8);
         }
+        >span {
+            font-size: 14px;
+        }        
     }
     .left-frame {
-        padding-left:10%;
+        max-width: 474px;
+        left: 40px;
+    }
+    .right-frame {
+        >div:first-child {
+            width: 400px;
+            >h1 {
+                font-size: 56px;
+            }
+            >div:last-child>button {
+                font-size: 16px;
+            }
+        }
+        
+    }
+    .blue-line {
+        top: -58px;
     }
     .overflow-wrapper {
         max-width: 300px;
-        top: -350px;
         >img {
-            left: -600px;
+            left: -570px;
         }
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .skill {
+        margin-right: 40px;
+    }
+    .left-frame {
+        max-width: 384px;        
+    }
+    .right-frame {
+        gap: 6px;
+        >div:first-child {
+            width: 270px;
+            >h1 {
+                font-size: 45px;
+            } 
+                      
+        }
+        
+    }  
+    .blue-line {
+        top: -70px;
+        width: 20px;
+    } 
+}
+
+@media only screen and (max-width: 430px) {
+    .skill {
+        margin-right: 10px;
+    }
+    .left-frame {
+        max-width: 294px;
+        left: 10px;
     }
 }
