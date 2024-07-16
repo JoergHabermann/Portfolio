@@ -15,8 +15,7 @@
     }
     >div:last-child {
         @include flexParams(center,space-between);
-        padding-left: 100px;
-        width: 100%;
+        padding-left: 100px;        
     }
 }
 
@@ -121,7 +120,7 @@ textarea {
   position: relative;
   left: -5px;
   z-index: 0;
-  width: 28px;
+  min-width: 28px;
   height: 28px;
   border-radius: 50%;
   background-color: transparent;
@@ -134,7 +133,7 @@ textarea {
     position: absolute;        
     cursor: pointer;
     height: 28px;
-    width: 28px;
+    min-width: 28px;
     appearance: none;
     z-index: 2;
 
@@ -148,7 +147,7 @@ textarea {
   .checkmark {
     position: relative;    
     height: 18px;
-    width: 18px;
+    min-width: 18px;
     border: 2px solid $light-blue;
     background-color: transparent;
     transition: border-color 75ms ease-in-out;
@@ -172,10 +171,42 @@ textarea {
 
   .image-wrapper {
     position: absolute;
-    left: -450px;
-    bottom: -520px;    
+    left: 0;
+    bottom: 0;
+    width: 500px;   
     >img {
+      position:relative;
+      left: -350px;
+      bottom: -420px; 
       transform: rotate(-100deg);
     }
   }
 
+  @media only screen and (max-width:1100px) {
+    .main>div:first-child>h1 {
+      font-size: 72px;
+    }
+    .main>div:last-child {
+      @include flexParams(center,flex-start);
+      flex-direction: column;
+      gap: 45px;
+    }
+    .text-frame, .contact-frame {
+      height: unset;
+      max-width: 620px;      
+    }
+    .image-wrapper>img {
+       left: -450px;
+       bottom: -440px;
+       transform: rotate(-120deg);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .main>div:last-child {
+      padding-left: 50px;
+    }
+    .main {
+      padding: 150px 0px;
+    }
+  }

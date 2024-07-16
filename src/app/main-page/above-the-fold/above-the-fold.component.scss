@@ -17,11 +17,11 @@
     @include flexParams(center,center);
     min-width: 850px;
     background-image: url('../../../assets/img/twinsbg.png');    
-    background-position: 0px 250px;
+    background-position: 50% 250px;
     background-size: contain;    
     background-repeat: no-repeat;    
     >img {        
-        height: 850px;        
+        height: 90vh;        
     }
 }
 
@@ -145,13 +145,13 @@ h2 {
 @media only screen and (max-width:1350px) {
     .headline-container {
         >span {
-            font-size: 32px; 
+            font-size: 26px; 
         }
         >div>h1 {
-            font-size: 48px;
+            font-size: 38px;
         }
         >div>h2 {
-            font-size: 32px;
+            font-size: 26px;
         }
     }
 }
@@ -160,9 +160,9 @@ h2 {
         .left-frame {
             padding:0;
             width: 600px;
-            background-position: 50px 100px;
+            background-position: 50% 90px;
             >img {
-                height: 700px;
+                height: 70vh;
             }
         }  
         .right-frame {
@@ -193,11 +193,11 @@ h2 {
     .left-frame {
         @include flexParams(center,center);        
         width: 80%; 
-        background-position: 80px 100px;
+        background-position: 50% 100px;
         position: relative;
         top: 60px; 
         >img {
-            height: 650px;
+            height: 70vh;
         }                 
     }
     .buttoncontainer button{

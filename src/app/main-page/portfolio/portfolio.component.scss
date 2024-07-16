@@ -87,7 +87,7 @@ h1 {
 @media only screen and (max-width: 1020px) {
     .long-line {
         width: 184px;
-    }
+    }    
 }
 
 @media only screen and (max-width: 760px) {
@@ -112,6 +112,21 @@ h1 {
 @media only screen and (max-width: 620px) {
     .projectcontainer {
         margin-top: 50px;
+    }
+    .first-image-wrapper {
+        width: 100vw;
+        left: -10px;
+        top: 750px;
+        >img {
+            height: 50vh;
+        }
+    }
+    .second-image-wrapper {
+        width: 200px;
+        bottom: -400px;
+        >img {
+            height: 500px;
+        }
     }
 }
 
