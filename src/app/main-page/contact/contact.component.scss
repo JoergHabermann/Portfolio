@@ -49,6 +49,8 @@ h1 {
 
 .contact-frame {
     @include flexParams(flex-start,flex-start);
+    position: relative;
+    z-index: 3;
     flex-direction: column;
     width: 620px;
     height: 550px;
@@ -173,7 +175,8 @@ textarea {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 500px;   
+    width: 500px; 
+    overflow: hidden;  
     >img {
       position:relative;
       left: -350px;
@@ -183,30 +186,66 @@ textarea {
   }
 
   @media only screen and (max-width:1100px) {
-    .main>div:first-child>h1 {
-      font-size: 72px;
+    .main {
+      padding: 150px 0px;
+      @include flexParams(center,center);
+      >div:first-child>h1 {
+        font-size: 72px;
+      }
     }
     .main>div:last-child {
       @include flexParams(center,flex-start);
       flex-direction: column;
       gap: 45px;
+      padding-left: 0px;
     }
     .text-frame, .contact-frame {
       height: unset;
+      width: 100%;
       max-width: 620px;      
     }
-    .image-wrapper>img {
+    .image-wrapper {
+      width: 100%;
+      >img {
        left: -450px;
        bottom: -440px;
-       transform: rotate(-120deg);
+       transform: rotate(-120deg);     
+      }
     }
   }
 
   @media only screen and (max-width: 768px) {
-    .main>div:last-child {
-      padding-left: 50px;
+    .main {
+      >div:first-child {
+        gap: 30px;
+        >h1 {
+          font-size: 56px;
+        }
+      }
+      >div:last-child {
+        padding: 0px 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .contact-frame>form>div:last-child>button {
+      font-size: 16px;
+    }
+    .image-wrapper>img {
+      left: -550px;
+      transform: rotate(-110deg);
     }
     .main {
-      padding: 150px 0px;
+      >div:first-child {
+        gap: 5px;
+        >h1 {
+          font-size: 45px;
+        }
+      }
+      
+      >div:last-child {
+        padding: 0px 25px;
+      }
     }
   }

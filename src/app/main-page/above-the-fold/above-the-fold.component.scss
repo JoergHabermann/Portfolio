@@ -15,7 +15,7 @@
 
 .left-frame {
     @include flexParams(center,center);
-    min-width: 850px;
+    width: 850px;
     background-image: url('../../../assets/img/twinsbg.png');    
     background-position: 50% 250px;
     background-size: contain;    
