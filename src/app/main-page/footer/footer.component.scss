@@ -2,17 +2,17 @@
 
 footer {
     background-color: $primary-color;    
-    @include flexParams(center,center);
-    flex-direction: column;    
+    @include flexParams(center,center);      
     padding: 120px 100px 100px 100px;  
     border-top: solid 4px $light-blue;
     width: 100%;
     >div {
         @include flexParams(center,space-between);
-        width: 100%;
+        width: 100%;        
         >div:first-child {
             @include flexParams(flex-start,center);
             flex-direction: column;
+            position: relative;
             >span {
                 color: white;
                 font-weight: 700;   
@@ -56,4 +56,35 @@ footer {
             }
         }
     }  
+}
+
+@media only screen and (max-width:900px) {
+    footer {
+        padding: 90px 100px 120px 100px;
+        >div {
+            @include flexParams(center,center);
+            flex-direction: column;
+            gap: 23px;
+            >div:first-child>a {
+                position:absolute;
+                bottom: -155px;
+                left: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    footer {
+        padding: 80px 50px 90px 50px; 
+    }
+}
+
+@media only screen and (max-width:480px) {
+    footer {
+        padding: 66px 25px 81px 25px; 
+        >div>span {
+            font-size: 18px;
+        }
+    }
 }
