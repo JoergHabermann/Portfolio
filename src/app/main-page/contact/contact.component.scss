@@ -15,7 +15,8 @@
     }
     >div:last-child {
         @include flexParams(center,space-between);
-        padding-left: 100px;        
+        padding-left: 100px;  
+        width: 100%;      
     }
 }
 

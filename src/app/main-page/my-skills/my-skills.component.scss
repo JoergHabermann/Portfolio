@@ -23,8 +23,7 @@ h1 {
     gap: 10px;  
     width: 88px;
     height: 100px;
-    margin-bottom: 54px;
-    margin-right: 120px;
+    margin: 27px 60px;
     >img {
         transition: all 75ms ease-in-out;
         &:hover {
@@ -106,7 +105,7 @@ h1 {
             }
             >div:last-child {
                 position:absolute;
-                bottom: 0;
+                bottom: -20px;
                 left: 0;  
                 margin-top: 55px;                          
                 width: 100%;
@@ -117,7 +116,7 @@ h1 {
         top: -45px;
     }
      .left-frame {
-        left: 88px;
+        left: 0;
         max-width: 832px;
     }   
     
@@ -134,8 +133,7 @@ h1 {
 
 @media only screen and (max-width: 720px) {
     .skill {
-        margin-right: 70px;
-        margin-bottom: 32px;
+        margin: 16px 35px;
         >img {
             transform: scale(0.8);
         }
@@ -144,8 +142,7 @@ h1 {
         }        
     }
     .left-frame {
-        max-width: 474px;
-        left: 40px;
+        max-width: 474px;        
     }
     .right-frame {
         >div:first-child {
@@ -172,7 +169,7 @@ h1 {
 
 @media only screen and (max-width: 520px) {
     .skill {
-        margin-right: 40px;
+        margin: 16px 20px;
     }
     .left-frame {
         max-width: 384px;        
@@ -196,10 +193,9 @@ h1 {
 
 @media only screen and (max-width: 430px) {
     .skill {
-        margin-right: 10px;
+        margin: 16px 5px;
     }
     .left-frame {
-        max-width: 294px;
-        left: 10px;
+        max-width: 294px;        
     }
 }

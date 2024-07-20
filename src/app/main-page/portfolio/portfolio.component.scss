@@ -21,20 +21,24 @@ h1 {
     margin-bottom: 34px;
     >div {
         @include flexParams(center, flex-start);
+        width: 100%;
         gap: 40px;
         margin-bottom: 35px;
     } 
+    >p {
+        padding-right: 25px;
+    }
 }
 
 .short-line {
-    width: 109px;
+    min-width: 109px;
     height: 4px;
     background-color: $dark-blue;
     border-radius: 4px 0px 0px 4px;
 }
 
 .long-line {
-    width: 484px;
+    width: 100%;
     height: 4px;
     background-color: $dark-blue;    
 }
@@ -54,6 +58,8 @@ h1 {
     position: absolute;
     top: 150px;
     left: -100px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .second-image-wrapper {
@@ -70,9 +76,6 @@ h1 {
 }
 
 @media only screen and (max-width: 1220px) {
-    .long-line {
-        width: 384px;
-    }
     .first-image-wrapper {        
         top: 650px;
         >img {
@@ -84,15 +87,9 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 1020px) {
-    .long-line {
-        width: 184px;
-    }    
-}
-
 @media only screen and (max-width: 760px) {
     .short-line {
-        width: 30px;
+        min-width: 30px;
     }
     h1 {
         font-size: 56px;
@@ -132,10 +129,7 @@ h1 {
 
 @media only screen and (max-width: 520px) {
     .short-line {
-        width: 15px;
-    }
-    .long-line {
-        width: 45px;
+        min-width: 15px;
     }
     .headcontainer {
         width: 275px;

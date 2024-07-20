@@ -67,7 +67,7 @@ footer {
             gap: 23px;
             >div:first-child>a {
                 position:absolute;
-                bottom: -155px;
+                bottom: -150px;
                 left: 20px;
             }
         }
@@ -82,7 +82,7 @@ footer {
 
 @media only screen and (max-width:480px) {
     footer {
-        padding: 66px 25px 81px 25px; 
+        padding: 56px 25px 81px 25px; 
         >div>span {
             font-size: 18px;
         }

@@ -2,13 +2,12 @@
 
 header {
     height: 109px;
-    padding: 0px 100px;
     background-color: $primary-color;
-    @include flexParams(center,flex-start);
-    width: 100%;
+    @include flexParams(center,flex-start);    
     >div {
         @include flexParams(center,space-between); 
         width: 100%;
+        padding: 0px 100px;
         >span {
             color: white;
             font-weight: 700;   
@@ -44,7 +43,6 @@ nav {
         &:hover {
             color: #00BEE8;
         }
-
     }
 }
 
@@ -52,16 +50,16 @@ nav {
     nav {
         display: none;        
     }
-    header>div>img {
-        display: block;
-    }
-    header {
+    header>div {
         padding: 0px 50px;
-    }  
+        >img {
+            display: block;
+        }          
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    header {
+    header>div {
         padding: 0px 25px;
     }    
 }

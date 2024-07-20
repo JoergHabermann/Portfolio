@@ -19,7 +19,8 @@
     background-image: url('../../../assets/img/twinsbg.png');    
     background-position: 50% 250px;
     background-size: contain;    
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
+    overflow-x: hidden;    
     >img {        
         height: 90vh;        
     }
@@ -185,7 +186,7 @@ h2 {
     .right-frame {
         padding: 0;
         left: 0;
-        top: 0;
+        top: 20px;
         >div:last-child {
             margin-top: 24px;
         }
@@ -207,8 +208,11 @@ h2 {
         width: 62px;
     }
     .banner-wrapper {
-        bottom: -250px;
+        bottom: -270px;
     } 
+    .link-it {
+        top: -30px;
+    }
 }
 
 @media only screen and (max-width:820px) {

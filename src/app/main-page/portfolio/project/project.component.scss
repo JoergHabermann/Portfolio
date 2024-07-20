@@ -21,6 +21,7 @@
     @include flexParams(center,center);
     width: 620px;
     height: 340px;
+    max-width: 100%;
     >img {
         width: 400px;
     }
