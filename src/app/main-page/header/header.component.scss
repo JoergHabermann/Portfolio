@@ -46,6 +46,12 @@ nav {
     }
 }
 
+@media only screen and (max-width:1000px) {
+    header  {
+        height: 80px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     nav {
         display: none;        
@@ -59,7 +65,7 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
-    header>div {
-        padding: 0px 25px;
+    header>div  {
+        padding: 0px 25px;        
     }    
 }
