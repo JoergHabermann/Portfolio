@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+header {
+    height: 109px;
+    background-color: $primary-color;
+    @include flexParams(center,flex-start);    
+    >div {
+        @include flexParams(center,space-between); 
+        width: 100%;
+        padding: 0px 100px;
+        >span {
+            color: white;
+            font-weight: 700;   
+            font-size: 40px;         
+            >span:last-child {
+                color: $light-blue;
+                font-size: 40px;
+            }            
+        }  
+        >img {
+            &:hover {
+                cursor: pointer;
+                filter: brightness(0) saturate(100%) invert(74%) 
+                sepia(42%) saturate(5821%) hue-rotate(147deg) 
+                brightness(94%) contrast(101%);
+            }
+        }          
+    }    
+}
+
+@media only screen and (max-width:1000px) {
+    header  {
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header>div  {
+        padding: 0px 25px;        
+    }    
+}

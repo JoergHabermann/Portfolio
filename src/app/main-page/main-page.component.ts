@@ -6,6 +6,7 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { BurgermenuComponent } from './header/burgermenu/burgermenu.component';
 
 @Component({
   selector: 'app-main-page',
@@ -18,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
+    BurgermenuComponent
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
