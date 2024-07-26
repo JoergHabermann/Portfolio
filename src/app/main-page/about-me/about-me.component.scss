@@ -3,7 +3,7 @@
 .main {   
     @include flexParams(center,space-between);
     background-color: $primary-color;
-    padding: 150px 0px 100px 100px;
+    padding: 150px 0px 50px 100px;
 }
 
 h1 {
@@ -147,7 +147,7 @@ p {
 
 @media only screen and (max-width: 480px) {
     .main {
-        padding: 100px 0px 100px 15px;        
+        padding: 100px 0px 50px 15px;        
         gap: 2%;
     }
     .left-frame>h1 {

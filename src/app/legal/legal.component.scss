@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+
+.main {    
+    background-color: $primary-color;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    @include flexParams(flex-start,flex-start);
+    flex-direction: column;
+    padding: 110px 100px;    
+}
+
+.legaltext {
+    @include flexParams(flex-start, flex-start);
+    flex-direction: column;
+    
+}
