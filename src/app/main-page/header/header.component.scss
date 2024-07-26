@@ -8,18 +8,21 @@ header {
         @include flexParams(center,space-between); 
         width: 100%;
         padding: 0px 100px;
-        >span {
-            color: white;
-            font-weight: 700;   
-            font-size: 40px;         
-            >span:last-child {
-                color: $light-blue;
-                font-size: 40px;
-            }
+        >a {
+            text-decoration: none;
+            >span {
+                color: white;
+                font-weight: 700;   
+                font-size: 40px;         
+                >span:last-child {
+                    color: $light-blue;
+                    font-size: 40px;
+                }            
+            }  
             &:hover {
                 cursor: pointer;
             }
-        }  
+        }
         >img {
             display:none;
             &:hover {

@@ -25,12 +25,15 @@
   $light-blue: #00BEE8;
   $disabled: #B6B6B6;
 
-
   * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   /* div {
@@ -65,6 +68,12 @@
         border-radius: 10px;
         color: white;
         transition: all 75ms ease-in-out;
+        >a {
+          text-decoration: none;
+          color: white;
+          font-size: 23px;
+          
+        }
         &:not(:disabled):hover {
             padding: 20px 40px;
             cursor: pointer;
@@ -79,4 +88,8 @@
           background-color: $disabled;
         }
     }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

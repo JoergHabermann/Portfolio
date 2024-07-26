@@ -1,12 +1,19 @@
- <div class="main"> 
-    <app-header></app-header>
-    <div class="maincontent">              
-        <app-above-the-fold></app-above-the-fold>
-        <app-burgermenu></app-burgermenu>  
-        <app-about-me></app-about-me>
-        <app-my-skills></app-my-skills>
-        <app-portfolio></app-portfolio>
-        <app-contact></app-contact>        
-    </div> 
-    <app-footer></app-footer>
+<div class="main">
+  <app-header
+    [burgerstatusHead]="burgerstatus"
+    (statusEvent)="toggleBurgerStatus()"
+  ></app-header>
+  <app-burgermenu
+    [burgerstatusMenu]="burgerstatus"
+    (statusEvent)="toggleBurgerStatus()"
+    [ngClass]="{'burger-active': burgerstatus}"
+  ></app-burgermenu>
+  <div class="maincontent">
+    <app-above-the-fold id="above"></app-above-the-fold>
+    <app-about-me id="about"></app-about-me>
+    <app-my-skills id="skills"></app-my-skills>
+    <app-portfolio id="portfolio"></app-portfolio>
+    <app-contact id="contact"></app-contact>
+  </div>
+  <app-footer></app-footer>
 </div>

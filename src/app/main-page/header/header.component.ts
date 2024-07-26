@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  @Input() burgerstatusHead:boolean = false;
+  @Output() statusEvent = new EventEmitter<boolean>();
 
+  menuSlideIn() {
+    this.burgerstatusHead = true;
+    this.statusEvent.emit(this.burgerstatusHead);
+  }
 }
