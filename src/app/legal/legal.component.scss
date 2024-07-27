@@ -23,3 +23,39 @@ h1, h2, h3 {
 h4, li {
     color: white;
 }
+
+h1 {
+    margin: 20px 0px;
+}
+
+h2 {
+    margin: 16px 0px;
+}
+
+h3 {
+    margin: 10px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .legaltext {
+        padding: 110px 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .legaltext {
+        padding: 110px 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
