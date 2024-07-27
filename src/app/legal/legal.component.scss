@@ -2,8 +2,8 @@
 
 .main {    
     background-color: $primary-color;
-    position: relative;
-    min-height: 100vh;
+    position: relative; 
+    min-height: 100vh;   
     width: 100%;
     @include flexParams(flex-start,flex-start);
     flex-direction: column;       
@@ -13,5 +13,13 @@
     @include flexParams(flex-start, flex-start);
     flex-direction: column;
     padding: 110px 100px; 
-    
+    flex-grow: 1;    
+}
+
+h1, h2, h3 {
+    color: $light-blue;
+}
+
+h4, li {
+    color: white;
 }
