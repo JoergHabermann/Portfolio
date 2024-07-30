@@ -3,11 +3,16 @@
         <a href="#above">
             <span>Jör<span>g</span></span>
         </a>
-        <nav>
-            <a href="#about">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-        </nav>        
-        <img src="../../../assets/img/burger.svg" alt="burgericon" (click)="menuSlideIn()">        
+        <div>
+            <span *ngIf="!checkGerman()" (click)="switchLanguage()"><span>EN</span> | DE</span>
+            <span *ngIf="checkGerman()" (click)="switchLanguage()"><span>DE</span> | EN</span>
+            <nav *ngIf="isMainRoute()">
+                <a href="#about">{{ 'g-about' | translate }}</a>
+                <a href="#skills">{{ 'g-skills' | translate }}</a>
+                <a href="#portfolio">Portfolio</a>
+            </nav>        
+            <img src="../../../assets/img/burger.svg" alt="burgericon" (click)="menuSlideIn()" *ngIf="isMainRoute()">
+            <a href="main" *ngIf="!isMainRoute()"><img src="../../../assets/img/arrowup.svg" alt="arrowicon"></a>  
+        </div>      
     </div>
 </header>

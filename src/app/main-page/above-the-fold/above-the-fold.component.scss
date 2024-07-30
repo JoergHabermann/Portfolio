@@ -44,8 +44,8 @@
     >span {
         transform: rotate(-180deg);
         color: white;
-        writing-mode: vertical-lr;
-        font-size: 64px;        
+        writing-mode: vertical-lr;        
+        font-size: 64px;                
     }    
 }
 
@@ -87,7 +87,7 @@ h2 {
     z-index: 1;
     top: -50px;
     width: 100%;
-    >div {
+    >div:first-child {
         @include flexParams(center,center);
         gap: 42px;
         min-height: 50px;
@@ -108,19 +108,23 @@ h2 {
                 cursor: pointer;
             }
         }
-    }
+    }   
     >span {
-        @include flexParams(center,center);
-        position:relative;
-        top: -65px;
-        right: -65px;
+        @include flexParams(center,center);  
+        position: relative;
+        align-self: flex-start;
+        top: -65px;  
+        right: -65px;   
+        /* max-width: 155px; */
+        
+          
         font-size: 23px;
         color: white;
-        transform: rotate(90deg);
+        transform: rotate(90deg);    
         >img {
             transform: rotate(-90deg);
-        }
-    }    
+        }    
+    }      
 }
 
 .blue-line {
@@ -260,6 +264,9 @@ h2 {
             height: 65vh;
         }
     }   
+    .headline-container {
+        max-height: 62px;
+    }
     .banner-wrapper {
         bottom: -325px;
         min-width: 800px;

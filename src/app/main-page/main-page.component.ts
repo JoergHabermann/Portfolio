@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgermenuComponent } from './burgermenu/burgermenu.component';
 import { NgClass } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-page',
@@ -21,7 +22,8 @@ import { NgClass } from '@angular/common';
     ContactComponent,
     FooterComponent,
     BurgermenuComponent,
-    NgClass
+    NgClass,
+    TranslateModule    
   ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

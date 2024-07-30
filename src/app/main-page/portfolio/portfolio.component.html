@@ -6,8 +6,7 @@
       <div class="long-line"></div>
     </div>
     <p>
-      Explore a selection of my work here - Interact with projects to see my
-      skills in action.
+      {{ 'portfolio-text' | translate }}
     </p>
   </div> 
   <div class="projectcontainer"> 
@@ -20,7 +19,8 @@
     <app-project *ngFor="let project of projects"
       [title]="project.title"
       [skills]="project.skills"
-      [description]="project.description"
+      [descriptionDE]="project.descriptionDE"
+      [descriptionEN]="project.descriptionEN"
       [image]="project.image"
       [picleft]="project.picleft"
     ></app-project>

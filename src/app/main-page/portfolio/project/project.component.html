@@ -5,7 +5,8 @@
     <div class="description-frame">        
       <h2>{{ title }}</h2>
       <span>{{ skills }}</span>
-      <p>{{ description }}</p>        
+      <p *ngIf="!checkGerman()">{{ descriptionEN }}</p>
+      <p *ngIf="checkGerman()">{{ descriptionDE }}</p>         
       <div class="buttonbucket">
         <button>Live test</button>
         <button>Github</button>

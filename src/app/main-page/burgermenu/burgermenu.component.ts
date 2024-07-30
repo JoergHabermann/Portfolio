@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-burgermenu',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,TranslateModule],
   templateUrl: './burgermenu.component.html',
   styleUrl: './burgermenu.component.scss'
 })

@@ -1,25 +1,25 @@
 <div class="main">
   <div>
     <div class="blue-line"></div>
-    <h1>Contact</h1>
+    <h1>{{ 'g-contact' | translate }}</h1>
   </div>
   <div class="image-wrapper">
     <img src="../../../assets/img/rightbutterfly.png" alt="">
   </div>
   <div>
     <div class="text-frame">      
-      <h2>Got a problem to solve?</h2>
+      <h2>{{ 'contact-h2' | translate }}</h2>
       <p>
-        Contact me through this form, I am interested in hearing from you,
-        knowing your ideas and contributing to your projects with my work.
+        {{ 'contact-p' | translate }}
       </p>
-      <p>Need a Frontend developer? <b>Contact me!</b></p>      
+      <p>{{ 'contact-need' | translate }}<br><br>
+        <b>{{ 'contact-bold' | translate }}</b></p>      
     </div>    
     <div class="contact-frame">
       <form>
-        <input type="text" class="contact-input" placeholder="Your name" />
-        <input type="email" class="contact-input" placeholder="Your email" />
-        <textarea class="contact-input" placeholder="Your message">          
+        <input type="text" class="contact-input" placeholder="{{ 'contact-name' | translate }}" />
+        <input type="email" class="contact-input" placeholder="{{ 'contact-mail' | translate }}" />
+        <textarea class="contact-input" placeholder="{{ 'contact-message' | translate }}">          
         </textarea>  
         <div class="policy-container">      
           <div class="checkbox-container">
@@ -27,11 +27,12 @@
             <span class="checkmark"></span>
           </div>  
           <label for="box">        
-              I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+              {{ 'contact-mark1' | translate }} <a href="legal">{{ 'contact-policy' | translate }}</a>
+              {{ 'contact-mark2' | translate }}
           </label>
         </div>
         <div class="buttoncontainer">
-          <button disabled="true">Send a message</button>
+          <button disabled="true">{{ 'contact-cta' | translate }}</button>
         </div>
       </form>      
       <a href="#above"><img src="../../../assets/img/arrowup.svg" alt="arrowup"></a>     

@@ -1,0 +1,30 @@
+{
+    "above-who":"I am",
+    "above-cta":"Let's talk",
+    "above-scroll":"scroll down",
+
+    "about-first":"ENGLISCH First Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
+    "about-bulb":"ENGLISCH Bulb Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
+    "about-puzzle":"ENGLISCH Puzzle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
+
+    "skills-text":"I have grown my frontend developments skills that have allowed me to create different real projects.",
+    "skills-cta":"Get in touch",
+
+    "portfolio-text":"Explore a selection of my work here - Interact with projects to see my skills in action.",
+
+    "contact-mark1":"I've read the",
+    "contact-policy":"privacy policy",
+    "contact-mark2":"and agree to the processing of my data as outlined.",
+    "contact-cta":"Send a message",
+    "contact-name":"Your name",
+    "contact-mail":"Your email",
+    "contact-message":"Your message",
+    "contact-h2":"Got a problem to solve?",
+    "contact-p":"Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "contact-need":"Need a Frontend developer?",
+    "contact-bold":"Contact me!",
+
+    "g-about":"About me",
+    "g-skills":"Skills",
+    "g-contact":"Contact"    
+}
