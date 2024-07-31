@@ -2,7 +2,7 @@ import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { TranslateModule} from '@ngx-translate/core';
 import { routes } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { provideTranslation } from './app.component';
 
 export const appConfig: ApplicationConfig = {
@@ -11,5 +11,6 @@ export const appConfig: ApplicationConfig = {
                 HttpClientModule,
                 TranslateModule.forRoot(provideTranslation())
               ]),
+              provideHttpClient(),
   ]
 };

@@ -30,9 +30,7 @@ p {
     >div:first-child {
         @include flexParams(flex-end,center);        
         height: 450px;
-        width: 450px;
-        border-radius: 50%;
-        border: solid 4px $light-blue;
+        width: 450px;               
         overflow: hidden;
         >img {
             height: 550px;
@@ -54,7 +52,16 @@ p {
     z-index: 1;  
     width: 267px;
     height: 4px;
-    background-color: $light-blue;      
+    background-color: transparent;      
+}
+
+.inline {
+    position:absolute;
+    z-index: 2; 
+    right: 0;
+    top: 0;     
+    height: 4px;
+    background-color: $light-blue; 
 }
 
 .text-container {    
@@ -78,6 +85,26 @@ p {
             }
         }
     }
+}
+
+.slide-bar {  
+    transition: 450ms;  
+    width: 0px;
+}
+
+.slide-bar.visible {
+    width: 100%;
+}
+
+.img-border {
+    transition: 400ms;
+    transition-delay: 450ms;
+    border: solid 4px transparent;  
+    border-radius: 50%;   
+}
+
+.img-border.visible {
+    border: solid 4px $light-blue;
 }
 
 @media only screen and (max-width: 1400px) {

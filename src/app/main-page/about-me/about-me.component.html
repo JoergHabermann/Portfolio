@@ -5,27 +5,27 @@
       <p>
         {{ 'about-first' | translate }}
       </p>
-      <div class="personal">
+      <div class="personal" appScrollTrigger>
         <div>
           <img src="../../../assets/img/bulb.svg" alt="bulb" />
-          <p>
+          <p class="slide-up animate" >
             {{ 'about-bulb' | translate }}
           </p>
         </div>
         <div>
           <img src="../../../assets/img/puzzle.svg" alt="puzzle" />
-          <p>
+          <p class="slide-up animate">
             {{ 'about-puzzle' | translate }}
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="right-frame">
-    <div>
-      <img src="../../../assets/img/selfie.png" alt="">
+  <div class="right-frame" appScrollTrigger>
+    <div class="img-border animate">
+      <img src="../../../assets/img/selfie.png" alt="selfie">
     </div>
-    <div class="blueline"></div>    
+    <div class="blueline"><div class="inline slide-bar animate"></div></div>    
     <div class="overflow-wrapper">
       <img src="../../../assets/img/cfrag.png" alt="">   
     </div> 

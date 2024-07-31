@@ -20,6 +20,16 @@
     justify-content: $justify;
   }
 
+  @keyframes scaleIn {
+    from {transform: scale(0.0)}
+    to {transform: scale(1)}
+  }
+
+  @keyframes slidein-right {
+    from {transform: translateX(-500px)}
+    to {transform: translateX(0px)}
+  }  
+
   $primary-color: #141D2F;
   $dark-blue: #4B47FF;
   $light-blue: #00BEE8;
@@ -94,3 +104,25 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.animate-button {    
+  animation: scaleIn 300ms ease-in-out;
+}
+
+.slidein-right {
+  animation: slidein-right 250ms ease-in-out;
+}
+
+.animate {
+  transition: all ease-in-out;
+}
+
+.slide-up {  
+  transition: 450ms;
+  transform: translateY(500px);
+}
+
+.slide-up.visible {
+  transform: translateY(0px);
+}
+

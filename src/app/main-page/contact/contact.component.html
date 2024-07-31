@@ -1,41 +1,82 @@
 <div class="main">
   <div>
     <div class="blue-line"></div>
-    <h1>{{ 'g-contact' | translate }}</h1>
+    <h1>{{ "g-contact" | translate }}</h1>
   </div>
   <div class="image-wrapper">
-    <img src="../../../assets/img/rightbutterfly.png" alt="">
+    <img src="../../../assets/img/rightbutterfly.png" alt="" />
   </div>
   <div>
-    <div class="text-frame">      
-      <h2>{{ 'contact-h2' | translate }}</h2>
+    <div class="text-frame">
+      <h2>{{ "contact-h2" | translate }}</h2>
       <p>
-        {{ 'contact-p' | translate }}
+        {{ "contact-p" | translate }}
       </p>
-      <p>{{ 'contact-need' | translate }}<br><br>
-        <b>{{ 'contact-bold' | translate }}</b></p>      
-    </div>    
+      <p>
+        {{ "contact-need" | translate }}<br /><br />
+        <b>{{ "contact-bold" | translate }}</b>
+      </p>
+    </div>
     <div class="contact-frame">
-      <form>
-        <input type="text" class="contact-input" placeholder="{{ 'contact-name' | translate }}" />
-        <input type="email" class="contact-input" placeholder="{{ 'contact-mail' | translate }}" />
-        <textarea class="contact-input" placeholder="{{ 'contact-message' | translate }}">          
-        </textarea>  
-        <div class="policy-container">      
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <input
+          [(ngModel)]="contactData.name"
+          type="text"
+          class="contact-input"
+          #name="ngModel"
+          id="contact-name"
+          name="contact-name"
+          placeholder="{{ 'contact-name' | translate }}"          
+          required
+        />        
+        <span *ngIf="name.invalid && name.touched">Please enter a name</span>        
+        <input
+          [(ngModel)]="contactData.email"
+          type="email"
+          class="contact-input"
+          #mail="ngModel"
+          id="contact-mail"
+          name="contact-mail"
+          placeholder="{{ 'contact-mail' | translate }}"
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          required
+        />
+        <span *ngIf="mail.invalid && mail.touched">Please enter a valid Mail</span>
+        <textarea
+          [(ngModel)]="contactData.message"
+          class="contact-input"
+          #message="ngModel"
+          id="contact-message"
+          name="contact-message"
+          placeholder="{{ 'contact-message' | translate }}"
+          required
+        >
+        </textarea>
+        <span *ngIf="message.invalid && message.touched">Please enter a Message</span>
+        <div class="policy-container">
           <div class="checkbox-container">
-            <input type="checkbox" id="box"/>
+            <input
+              [(ngModel)]="contactData.acceptPolicy"
+              type="checkbox"
+              id="box"
+              name="acceptPolicy"
+              required
+            />
             <span class="checkmark"></span>
-          </div>  
-          <label for="box">        
-              {{ 'contact-mark1' | translate }} <a href="legal">{{ 'contact-policy' | translate }}</a>
-              {{ 'contact-mark2' | translate }}
+          </div>
+          <label for="box">
+            {{ "contact-mark1" | translate }}
+            <a href="legal">{{ "contact-policy" | translate }}</a>
+            {{ "contact-mark2" | translate }}
           </label>
         </div>
         <div class="buttoncontainer">
-          <button disabled="true">{{ 'contact-cta' | translate }}</button>
+          <button value="Submit" type="submit">{{ "contact-cta" | translate }}</button>
         </div>
-      </form>      
-      <a href="#above"><img src="../../../assets/img/arrowup.svg" alt="arrowup"></a>     
+      </form>
+      <a href="#above"
+        ><img src="../../../assets/img/arrowup.svg" alt="arrowup"
+      /></a>
     </div>
-  </div>  
+  </div>
 </div>
