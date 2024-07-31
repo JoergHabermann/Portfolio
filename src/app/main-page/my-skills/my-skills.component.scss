@@ -25,7 +25,7 @@ h1 {
     height: 100px;
     margin: 27px 60px;
     >img {
-        transition: all 75ms ease-in-out;
+        transition: transform 75ms ease-in-out;
         &:hover {
             transform: translateY(-10px);
         }

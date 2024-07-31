@@ -78,7 +78,7 @@
         background-color: $light-blue;
         border-radius: 10px;
         color: white;
-        transition: all 75ms ease-in-out;
+        transition: all 135ms ease-in-out;
         >a {
           text-decoration: none;
           color: white;
@@ -113,16 +113,47 @@
   animation: slidein-right 250ms ease-in-out;
 }
 
-.animate {
-  transition: all ease-in-out;
+.animate {  
+  transition-timing-function: ease-in-out;
 }
 
-.slide-up {  
-  transition: 450ms;
+.slide-up {    
+  transition: all 450ms;
   transform: translateY(500px);
+  opacity: 0;
 }
 
 .slide-up.visible {
   transform: translateY(0px);
+  opacity: 1;
+  
 }
+
+.button-scale {  
+  transform: scale(0);
+}
+
+.button-scale.visible {
+  transform: scale(1);
+}
+
+.slide-left {   
+  transition: transform 450ms;
+  transform: translateX(-300px);
+}
+
+.slide-left.visible {
+  transform: translateX(0px);
+}
+
+.slide-right {  
+  transition: transform 450ms;
+  transform: translateX(300px);
+}
+
+.slide-right.visible {
+  transform: translateX(0px);
+}
+
+
 

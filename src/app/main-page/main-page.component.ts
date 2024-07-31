@@ -40,9 +40,5 @@ export class MainPageComponent {
     } else {
       this.renderer.removeClass(document.body, 'no-scroll');
     }
-  }
-
-  scrollToContact(el: HTMLElement) {
-    el.scrollIntoView();
-  }
+  }  
 }

@@ -1,6 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { ScrollTriggerDirective } from '../../scroll-trigger.directive';
 
 interface Skill {
   name: string;
@@ -10,7 +11,7 @@ interface Skill {
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [NgFor, TranslateModule],
+  imports: [NgFor, TranslateModule,ScrollTriggerDirective],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

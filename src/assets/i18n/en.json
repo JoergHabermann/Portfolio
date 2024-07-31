@@ -3,9 +3,9 @@
     "above-cta":"Let's talk",
     "above-scroll":"scroll down",
 
-    "about-first":"ENGLISCH First Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
-    "about-bulb":"ENGLISCH Bulb Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
-    "about-puzzle":"ENGLISCH Puzzle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
+    "about-first":"My name is Jörg Habermann, and I bring a unique combination of artistic background and entrepreneurial experience to the world of frontend development. This has allowed me to develop and sharpen my sense of aesthetics and attention to detail, as well as my understanding of the needs of customers and businesses.",
+    "about-bulb":"When developing web apps and business applications, I place great emphasis on user-friendliness and efficient workflows.",
+    "about-puzzle":"Additionally, I am familiar with git and working on team projects. This experience enables me to collaborate seamlessly with other developers and achieve shared goals efficiently.",
 
     "skills-text":"I have grown my frontend developments skills that have allowed me to create different real projects.",
     "skills-cta":"Get in touch",
@@ -26,5 +26,7 @@
 
     "g-about":"About me",
     "g-skills":"Skills",
-    "g-contact":"Contact"    
+    "g-contact":"Contact",  
+    
+    "footer-imprint":"Imprint"
 }

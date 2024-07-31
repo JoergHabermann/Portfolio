@@ -2,17 +2,17 @@
   <div class="overflow-wrapper">
     <img src="../../../assets/img/bluefunnel.png" alt="" />
   </div>
-  <div class="left-frame">   
-    <div class="skill" *ngFor="let skill of skills;" > <img [src]="skill.pic" alt="pic" /><span>{{ skill.name }}</span></div>
+  <div class="left-frame" appScrollTrigger>   
+    <div class="skill slide-left animate" *ngFor="let skill of skills;" > <img [src]="skill.pic" alt="pic" /><span>{{ skill.name }}</span></div>
   </div>
-  <div class="right-frame">
+  <div class="right-frame" appScrollTrigger>
     <div>
       <h1>{{ 'g-skills' | translate }}</h1>
       <p>
         {{ 'skills-text' | translate }}
       </p>
-      <div class="buttoncontainer">
-        <button><a href="#contact">{{ 'skills-cta' | translate }}</a></button>
+      <div class="buttoncontainer" appScrollTrigger>
+        <button class="button-scale animate"><a href="#contact">{{ 'skills-cta' | translate }}</a></button>
       </div>
     </div>
     <div class="blue-line"></div>

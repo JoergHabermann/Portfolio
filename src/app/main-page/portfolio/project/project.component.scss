@@ -6,6 +6,7 @@
     background-color: transparent;
     position:relative;
     left: 30px;
+    overflow-x: hidden;  
     &.reverse {
         left: -30px;
         .description-frame {
@@ -14,13 +15,13 @@
                 text-align: end;
             }
         }
-    }   
+    }     
 }
 
 .image-frame {
     @include flexParams(center,center);
     width: 620px;
-    height: 340px;
+    height: 400px;
     max-width: 100%;
     >img {
         width: 400px;
@@ -30,8 +31,7 @@
 .description-frame {    
     @include flexParams(flex-start,center);
     flex-direction: column;
-    width: 513px;
-    height: 340px;
+    width: 513px;    
     gap: 15px;     
     >h2 {
         font-weight: 700;
@@ -109,7 +109,8 @@
 }
 
 @media only screen and (max-width: 620px) {
-    .main {        
+    .main {  
+
         .description-frame {
             width: 280px;    
         }        

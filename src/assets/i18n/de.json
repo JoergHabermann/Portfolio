@@ -3,9 +3,9 @@
     "above-cta":"Melde dich",
     "above-scroll":"hier scrollen",
 
-    "about-first":"DEUTSCH First Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
-    "about-bulb":"DEUTSCH Bulb Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
-    "about-puzzle":"DEUTSCH Puzzle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus pariatur labore odio assumenda illo eos hic delectus error consequuntur sed culpa, est sint repudiandae dolores in qui excepturi accusantium omnis!",
+    "about-first":"Ich bin Jörg Habermann und bringe eine einzigartige Kombination aus künstlerischem Hintergrund und unternehmerischer Erfahrung in die Welt der Frontend-Entwicklung ein. Mein Gespür für Ästhetik und Detailgenauigkeit, sowie für die Bedürfnisse von Kunden und Unternehmen konnte ich daraus entwickeln und schärfen.",
+    "about-bulb":"Bei der Entwicklung von Web-Apps und Business-Anwendungen lege ich großen Wert auf Benutzerfreundlichkeit und effiziente Workflows.",
+    "about-puzzle":"Darüber hinaus bin ich mit git und der Arbeit in Teamprojekten vertraut. Diese Erfahrung ermöglicht es mir, nahtlos mit anderen Entwicklern zusammenzuarbeiten und gemeinsame Ziele effizient zu erreichen.",
 
     "skills-text":"Ich habe meine Frontend Fähigkeiten ausgebaut, dadurch entstanden verschiedene einzigartige Projekte.",
     "skills-cta":"Kontakt",
@@ -26,5 +26,7 @@
 
     "g-about":"Über mich",
     "g-skills":"Kompetenz",
-    "g-contact":"Kontakt"    
+    "g-contact":"Kontakt",
+    
+    "footer-imprint":"Impressum"
 }

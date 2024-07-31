@@ -1,8 +1,8 @@
-<div class="main" [ngClass]="{'reverse': !picleft}">
-    <div class="image-frame" *ngIf="picleft">
+<div class="main" [ngClass]="{'reverse': !picleft}" appScrollTrigger>
+    <div class="image-frame slide-left animate" *ngIf="picleft">
       <img [src]="image" alt="image">
     </div>
-    <div class="description-frame">        
+    <div class="description-frame animate" [ngClass]="{'slide-left': !picleft, 'slide-right': picleft}">        
       <h2>{{ title }}</h2>
       <span>{{ skills }}</span>
       <p *ngIf="!checkGerman()">{{ descriptionEN }}</p>
@@ -12,7 +12,7 @@
         <button>Github</button>
       </div>
     </div>
-    <div class="image-frame" *ngIf="!picleft">
+    <div class="image-frame slide-right animate" *ngIf="!picleft">
       <img [src]="image" alt="image">
     </div>
 </div>

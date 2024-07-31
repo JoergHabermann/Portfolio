@@ -1,11 +1,12 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollTriggerDirective } from '../../../scroll-trigger.directive';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [NgIf,NgClass, TranslateModule],
+  imports: [NgIf,NgClass, TranslateModule,ScrollTriggerDirective],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })

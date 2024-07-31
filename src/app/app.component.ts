@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { importProvidersFrom } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { provideHttpClient, HttpClient, HttpClientModule } from '@angular/common/http';
-import { bootstrapApplication } from '@angular/platform-browser';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AboveTheFoldComponent } from './main-page/above-the-fold/above-the-fold.component';
@@ -36,7 +34,7 @@ export class AppComponent {
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('en');  
-    translate.currentLang = 'en';
+    translate.currentLang = 'en';    
 
   }  
 }

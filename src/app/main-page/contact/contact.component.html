@@ -6,8 +6,8 @@
   <div class="image-wrapper">
     <img src="../../../assets/img/rightbutterfly.png" alt="" />
   </div>
-  <div>
-    <div class="text-frame">
+  <div appScrollTrigger>
+    <div class="text-frame slide-left animate">
       <h2>{{ "contact-h2" | translate }}</h2>
       <p>
         {{ "contact-p" | translate }}
@@ -18,7 +18,7 @@
       </p>
     </div>
     <div class="contact-frame">
-      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" appScrollTrigger>
         <input
           [(ngModel)]="contactData.name"
           type="text"
@@ -71,7 +71,7 @@
           </label>
         </div>
         <div class="buttoncontainer">
-          <button value="Submit" type="submit">{{ "contact-cta" | translate }}</button>
+          <button class="button-scale animate" [disabled]="contactForm.invalid" value="Submit" type="submit">{{ "contact-cta" | translate }}</button>
         </div>
       </form>
       <a href="#above"
