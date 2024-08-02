@@ -23,10 +23,16 @@
     "contact-p":"Konaktiere mich über das Formular, ich bin an deiner Nachricht interessiert und möchte zu deinen Projekten beitragen.",
     "contact-need":"Brauchst du einen Frontend Entwickler?",
     "contact-bold":"Kontaktiere mich!",
+    "contact-mailsend":"Deine Mail wurde erfolgreich versendet!",
+    "contact-valname":"Bitte gib einen Namen ein",
+    "contact-valmail":"Bitte gib eine E-Mail Adresse ein",
+    "contact-valmessage":"Bitte gib eine Nachricht ein",
 
     "g-about":"Über mich",
     "g-skills":"Kompetenz",
     "g-contact":"Kontakt",
     
-    "footer-imprint":"Impressum"
+    "footer-imprint":"Impressum",
+
+    "landscape-text":"Bitte drehen Sie Ihr Gerät !"
 }

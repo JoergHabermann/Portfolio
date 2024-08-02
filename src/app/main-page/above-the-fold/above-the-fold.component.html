@@ -5,18 +5,18 @@
         </div>
         <div class="right-frame">
             <div class="headline-container slidein-right">
-                <span>{{ 'above-who' | translate }}</span>
+                <span [ngClass]="{'me-en': language === 'en', 'me-de': language === 'de'}">{{ 'above-who' | translate }}</span>
                 <div>
                     <h1>Jörg Habermann</h1>
                     <h2>Frontend Developer</h2>
                 </div>
             </div>
             <div class="buttoncontainer">
-                <button class="animate-button">
-                    <a href="#contact">
-                        {{ 'above-cta' | translate }}
-                    </a>                    
-                </button>
+                <a href="#contact">
+                    <button class="animate-button">                    
+                        {{ 'above-cta' | translate }}                                       
+                    </button>
+                </a> 
             </div>
         </div>
     </div>

@@ -60,13 +60,13 @@ h1 {
     >form {
         @include flexParams(flex-start,center);
         flex-direction: column;   
-        width: 100%;         
+        width: 100%;               
         >div:last-child {
             margin-top: 32px;
             width: 100%;
             height: 110px;
         }        
-    }
+    }    
     >a {
       align-self: flex-end;
       >img {
@@ -104,12 +104,28 @@ h1 {
     border-radius: 10px;
     padding: 15px 25px;
     color: white;
-    font-size: 16px;
-    margin-bottom: 32px;
+    font-size: 16px;       
     &:hover {
         cursor: pointer;
         border-color: $light-blue;
     }
+}
+
+.alert-wrapper {
+  @include flexParams(center,flex-start);
+  width: 100%;
+  height: 36px;
+  >span {    
+    color: #E61C40;
+  }
+}
+
+.alert-color {
+  border-color: #E61C40;
+}
+
+.checked-color {
+  border-color: #70E61C;
 }
 
 input::placeholder, textarea::placeholder {
@@ -165,7 +181,7 @@ textarea {
       content: "";
       position: absolute;
       display: none;
-      left: 5px;
+      left: 4px;
       top: 1px;
       width: 4px;
       height: 8px;
@@ -190,6 +206,43 @@ textarea {
       transform: rotate(-100deg);
     }
   }
+
+  #mailsend {
+      position:fixed;
+      z-index: 12;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(20, 29, 47, 0.8);
+      transition: all 125ms ease-in-out;
+      >div {
+        @include flexParams(center,center);
+        flex-direction: column;
+        padding: 50px 20px 0px 20px;
+        background-color: $primary-color;
+        border-radius: 20px;
+        box-shadow: 4px 4px 4px 4px rgba(75,71,255,0.5);
+        position: fixed;
+        min-width: 260px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 13;
+        animation: slideup 325ms ease-in-out;
+        >h3 {
+          color: white;
+          text-align: center;  
+          max-width: 340px;    
+        }
+      }
+  }  
+
+  @keyframes slideup {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
   @media only screen and (max-width:1350px) {
     .text-frame {
       padding-right: 50px;
@@ -257,6 +310,14 @@ textarea {
       
       >div:last-child {
         padding: 0px 25px;
+      }
+    }
+    #mailsend {
+      .buttoncontainer>button {
+        font-size: 16px;
+      }
+      >h3 {
+      max-width: 280px;
       }
     }
   }

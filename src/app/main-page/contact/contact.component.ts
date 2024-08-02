@@ -1,20 +1,21 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollTriggerDirective } from '../../scroll-trigger.directive';
 
+
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule,TranslateModule,NgIf,ScrollTriggerDirective],
+  imports: [FormsModule,TranslateModule,NgIf,ScrollTriggerDirective,NgClass],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
 
-  /* http = Inject(HttpClient); */
+
+export class ContactComponent {    
 
   contactData = {
     name: "",
@@ -24,6 +25,7 @@ export class ContactComponent {
   }
 
   mailTest = true;
+  mailSend = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -36,11 +38,13 @@ export class ContactComponent {
     },
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private renderer: Renderer2) {
+    
+  }
 
   onSubmit(ngForm: NgForm) {
     ngForm.control.markAllAsTouched();
-    if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: () => {
@@ -49,10 +53,21 @@ export class ContactComponent {
           error: (error:string) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+            this.mailSend = true;
+          }
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {      
+      this.mailSend = true;
+      this.renderer.addClass(document.body, 'no-scroll');
     }
   }
+
+  closeinfo() {
+    this.mailSend = false;
+    this.renderer.removeClass(document.body, 'no-scroll');
+  }  
+
 }
+

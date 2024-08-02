@@ -6,6 +6,14 @@
   <div class="image-wrapper">
     <img src="../../../assets/img/rightbutterfly.png" alt="" />
   </div>
+  <div id="mailsend" *ngIf="mailSend" (click)="closeinfo()">
+    <div (click)="$event.stopPropagation()">
+      <h3>{{ 'contact-mailsend' | translate }}</h3>
+      <div class="buttoncontainer">
+        <button (click)="closeinfo()">OK</button>
+      </div>
+    </div>
+  </div>
   <div appScrollTrigger>
     <div class="text-frame slide-left animate">
       <h2>{{ "contact-h2" | translate }}</h2>
@@ -21,6 +29,7 @@
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" appScrollTrigger>
         <input
           [(ngModel)]="contactData.name"
+          [ngClass]="{'alert-color' : name.invalid && name.touched, 'checked-color' : name.valid && name.touched}"
           type="text"
           class="contact-input"
           #name="ngModel"
@@ -29,9 +38,10 @@
           placeholder="{{ 'contact-name' | translate }}"          
           required
         />        
-        <span *ngIf="name.invalid && name.touched">Please enter a name</span>        
+        <div class="alert-wrapper"><span *ngIf="name.invalid && name.touched">{{ 'contact-valname' | translate }}</span></div>        
         <input
           [(ngModel)]="contactData.email"
+          [ngClass]="{'alert-color' : mail.invalid && mail.touched, 'checked-color' : mail.valid && mail.touched}"
           type="email"
           class="contact-input"
           #mail="ngModel"
@@ -41,9 +51,10 @@
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           required
         />
-        <span *ngIf="mail.invalid && mail.touched">Please enter a valid Mail</span>
+        <div class="alert-wrapper"><span *ngIf="mail.invalid && mail.touched">{{ 'contact-valmail' | translate }}</span></div>
         <textarea
           [(ngModel)]="contactData.message"
+          [ngClass]="{'alert-color' : message.invalid && message.touched, 'checked-color' : message.valid && message.touched}"
           class="contact-input"
           #message="ngModel"
           id="contact-message"
@@ -52,7 +63,7 @@
           required
         >
         </textarea>
-        <span *ngIf="message.invalid && message.touched">Please enter a Message</span>
+        <div class="alert-wrapper"><span *ngIf="message.invalid && message.touched">{{ 'contact-valmessage' | translate }}</span></div>
         <div class="policy-container">
           <div class="checkbox-container">
             <input
@@ -78,5 +89,5 @@
         ><img src="../../../assets/img/arrowup.svg" alt="arrowup"
       /></a>
     </div>
-  </div>
+  </div>  
 </div>

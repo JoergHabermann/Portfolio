@@ -1,4 +1,4 @@
-<div class="main">
+<div id="main">
   <app-header
     [burgerstatusHead]="burgerstatus"
     (statusEvent)="toggleBurgerStatus()"
@@ -15,5 +15,9 @@
     <app-portfolio id="portfolio"></app-portfolio>
     <app-contact id="contact"></app-contact>
   </div>
-  <app-footer></app-footer>
+  <app-footer></app-footer>  
+</div>
+<div id="landscape">
+  <h1>{{ 'landscape-text' | translate }}</h1>
+  <img src="../../assets/img/phone.png" alt="turnphone">
 </div>

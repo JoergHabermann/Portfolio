@@ -23,10 +23,16 @@
     "contact-p":"Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "contact-need":"Need a Frontend developer?",
     "contact-bold":"Contact me!",
+    "contact-mailsend":"Your email has been sent successfully!",
+    "contact-valname":"Please enter a name",
+    "contact-valmail":"Please enter a valid Mail",
+    "contact-valmessage":"Please enter a Message",
 
     "g-about":"About me",
     "g-skills":"Skills",
     "g-contact":"Contact",  
     
-    "footer-imprint":"Imprint"
+    "footer-imprint":"Imprint",
+
+    "landscape-text":"Please turn your device!"
 }

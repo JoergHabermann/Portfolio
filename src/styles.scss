@@ -30,6 +30,8 @@
     to {transform: translateX(0px)}
   }  
 
+  
+
   $primary-color: #141D2F;
   $dark-blue: #4B47FF;
   $light-blue: #00BEE8;
@@ -71,20 +73,14 @@
     @include flexParams(flex-start,center);
     height: 130px;
     margin-top: 44px;
-    >button {
+    >button, >a>button {
         font-size: 23px;
         padding: 15px 30px;
         border: none;
         background-color: $light-blue;
         border-radius: 10px;
         color: white;
-        transition: all 135ms ease-in-out;
-        >a {
-          text-decoration: none;
-          color: white;
-          font-size: 23px;
-          
-        }
+        transition: all 135ms ease-in-out;        
         &:not(:disabled):hover {
             padding: 20px 40px;
             cursor: pointer;
@@ -113,8 +109,8 @@
   animation: slidein-right 250ms ease-in-out;
 }
 
-.animate {  
-  transition-timing-function: ease-in-out;
+.animate {    
+  transition-duration: 700ms;
 }
 
 .slide-up {    
@@ -153,6 +149,20 @@
 
 .slide-right.visible {
   transform: translateX(0px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {   
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark-blue;
+  border-radius: 10px;
 }
 
 

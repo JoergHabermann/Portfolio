@@ -4,16 +4,29 @@
     position:fixed;
     z-index: 11;
     top: 0;
-    left: 100vw;
+    left: 150vw;
     width: 100vw;
     transition: all 125ms ease-in-out;
   }  
 
-.main {
+#main, #landscape {
     @include flexParams(center,center);  
     flex-direction: column;  
     background-color: $primary-color;   
     width: 100%; 
+}
+
+#landscape {
+  display: none;
+  gap: 10%;
+  height: 100vh;
+  overflow: hidden;
+  >h1 {
+    color: white;
+  }
+  >img {    
+    animation: turnaround 3s infinite;
+  }
 }
 
 .maincontent {
@@ -23,4 +36,19 @@
 
 .burger-active {
   left: 0;
+}
+
+@keyframes turnaround {
+  from {transform: rotate(-135deg);}
+  to {transform: rotate(-45deg);}
+  
+}
+
+@media only screen and (orientation: landscape) and (hover:none) and (max-height: 599px)  {
+  #main {
+    display: none;
+  }
+  #landscape {
+    display: flex;
+  }
 }
