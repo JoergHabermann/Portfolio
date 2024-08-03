@@ -33,6 +33,9 @@ export class MainPageComponent {
 
   constructor(private renderer: Renderer2) {}
 
+  /**
+   * switching burgerstatus boolean, as well as toggling document scroll ability
+   */
   toggleBurgerStatus() {
     this.burgerstatus = !this.burgerstatus;
     if (this.burgerstatus) {

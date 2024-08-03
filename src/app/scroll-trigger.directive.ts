@@ -5,11 +5,16 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
   standalone: true
 })
 export class ScrollTriggerDirective {
-  private hasAnimated: boolean = false;
+  hasAnimated: boolean = false;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('window:scroll', ['$event'])
+
+  /**
+   * function to activate animation effect by adding visible class to all
+   * child elements of the set scrollTrigger with the animate class (only once)
+   */
   onWindowScroll() {
     if (!this.hasAnimated) {
       const rect = this.el.nativeElement.getBoundingClientRect();

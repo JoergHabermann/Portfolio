@@ -38,14 +38,29 @@ export class ContactComponent {
     },
   };
 
-  constructor(private http: HttpClient,private renderer: Renderer2) {
-    
+  constructor(private http: HttpClient,private renderer: Renderer2) {    
   }
 
+  /**
+   * Submit function checking validation and sending form as body
+   * @param ngForm Formular Modul of Angular
+   */
   onSubmit(ngForm: NgForm) {
     ngForm.control.markAllAsTouched();
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.sendBody(ngForm);  
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {      
+      this.mailSend = true;
+      this.renderer.addClass(document.body, 'no-scroll');
+    }
+  }
+
+  /**
+   * function performing http post request
+   * @param ngForm Formular Modul of Angular
+   */
+  sendBody(ngForm: NgForm) {
+    this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: () => {
             ngForm.resetForm();
@@ -58,12 +73,12 @@ export class ContactComponent {
             this.mailSend = true;
           }
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {      
-      this.mailSend = true;
-      this.renderer.addClass(document.body, 'no-scroll');
-    }
   }
 
+  /**
+   * function to set the mailsend boolean to false, so the elements can listen and close
+   * reactivating document scrolling aswell
+   */
   closeinfo() {
     this.mailSend = false;
     this.renderer.removeClass(document.body, 'no-scroll');

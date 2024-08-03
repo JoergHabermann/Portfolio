@@ -32,7 +32,7 @@ export class PortfolioComponent {
       mittels drag and drop Funktion, weise Benutzer und Kategorien zu.`,
       test: '',
       github: '',
-      image: '../../../assets/img/join.png',
+      image: 'assets/img/join.png',
       picleft: false,
     },
     {
@@ -44,7 +44,7 @@ export class PortfolioComponent {
       Hilf Sharkie dabei den Killer Wal zu besiegen und sammle Münzen und Giftflaschen.`,
       test: '',
       github: '',
-      image: '../../../assets/img/sharkie.png',
+      image: 'assets/img/sharkie.png',
       picleft: true,
     },
     {
@@ -56,7 +56,7 @@ export class PortfolioComponent {
       Informationen über Pokemons liefert und katalogisiert.`,
       test: '',
       github: '',
-      image: '../../../assets/img/pokedex.png',
+      image: 'assets/img/pokedex.png',
       picleft: false,
     }    
   ];

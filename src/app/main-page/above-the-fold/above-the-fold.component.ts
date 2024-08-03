@@ -12,7 +12,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class AboveTheFoldComponent {
 
   language:string;
-
+  /**
+   * setting language variable of component to current language from TranslateService Module
+   * subscribing to the language change aswell
+   * @param translate TranslateService used in the component
+   */
   constructor (translate : TranslateService) {
     this.language = translate.currentLang;
 

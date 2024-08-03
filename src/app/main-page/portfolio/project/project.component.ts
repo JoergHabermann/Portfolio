@@ -21,7 +21,11 @@ export class ProjectComponent {
   constructor(private translate: TranslateService) {   
   }
 
- public checkGerman() {    
+  /**
+   * function checking if current language is german
+   * @returns true if current language is german
+   */
+  checkGerman() {    
     return this.translate.currentLang === 'de';
   }
 }

@@ -18,6 +18,10 @@ export class LegalComponent {
   constructor(private translate: TranslateService) {   
   }
 
+  /**
+   * Function to evaluate current Language
+   * @returns true if current set language is german
+   */
  checkGerman() {    
     return this.translate.currentLang === 'de';
   }

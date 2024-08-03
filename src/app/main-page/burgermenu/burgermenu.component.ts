@@ -9,11 +9,15 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './burgermenu.component.html',
   styleUrl: './burgermenu.component.scss'
 })
+
+
 export class BurgermenuComponent {
   @Input() burgerstatusMenu:boolean = false;
   @Output() statusEvent = new EventEmitter<boolean>();
 
-
+  /**
+   * function to set the burgerstatus boolean to false, so the elements can listen and close
+   */
   menuSlideOut() {
     this.burgerstatusMenu = false;
     this.statusEvent.emit(this.burgerstatusMenu);
