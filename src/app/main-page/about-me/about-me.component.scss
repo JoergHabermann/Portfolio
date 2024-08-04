@@ -31,10 +31,7 @@ p {
         @include flexParams(flex-end,center);        
         height: 450px;
         width: 450px;               
-        overflow: hidden;
-        >img {
-            height: 550px;
-        }
+        overflow: hidden;        
     } 
       
 }
@@ -119,7 +116,7 @@ p {
             width: 350px;
             height: 350px;
             >img {
-                height: 420px;
+                height: 360px;
             }
         }
     }
