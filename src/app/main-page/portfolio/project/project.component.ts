@@ -15,6 +15,8 @@ export class ProjectComponent {
   @Input() skills!: string;
   @Input() descriptionEN!: string;
   @Input() descriptionDE!: string;
+  @Input() test!: string;
+  @Input() github!: string;
   @Input() image!: string;
   @Input() picleft!: boolean;
 

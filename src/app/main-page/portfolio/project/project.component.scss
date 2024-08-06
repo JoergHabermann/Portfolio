@@ -48,7 +48,7 @@
     @include flexParams(center,flex-start); 
     gap: 86px;
     margin-top: 20px;
-    >button:first-child {
+    >a:first-child>button {
         border:none;
         color: white;   
         background-color: $dark-blue;
@@ -61,7 +61,7 @@
             background-color: $light-blue;
         }
     }
-    >button:last-child {
+    >a:last-child>button {
         border:solid 1px $light-blue;
         color: white;   
         background-color: $primary-color;
@@ -125,7 +125,7 @@
     }   
     .buttonbucket {
         gap: 20px;
-        button {
+        >a>button {
             font-size: 16px !important;
         }
     }

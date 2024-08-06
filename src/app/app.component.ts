@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AboveTheFoldComponent } from './main-page/above-the-fold/above-the-fold.component';
 
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -33,8 +34,7 @@ export class AppComponent {
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'de']);
-    translate.setDefaultLang('en');  
-    translate.currentLang = 'en';    
-
+    translate.setDefaultLang('en'); 
+    translate.currentLang = translate.defaultLang; 
   }  
 }

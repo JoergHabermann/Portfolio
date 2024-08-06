@@ -31,7 +31,7 @@ export class PortfolioComponent {
       descriptionDE:`Aufgaben-Manager vom Kanban System inspiriert. Erstelle und organisiere Aufgaben
       mittels drag and drop Funktion, weise Benutzer und Kategorien zu.`,
       test: '',
-      github: '',
+      github: 'https://www.github.com/JoergHabermann/Join',
       image: 'assets/img/join.png',
       picleft: false,
     },
@@ -43,7 +43,7 @@ export class PortfolioComponent {
       descriptionDE: `Ein einfaches Jump-and Run Spiel, basierend auf einem objekt-orientierten Ansatz.
       Hilf Sharkie dabei den Killer Wal zu besiegen und sammle Münzen und Giftflaschen.`,
       test: '',
-      github: '',
+      github: 'https://www.github.com/JoergHabermann/sharkie',
       image: 'assets/img/sharkie.png',
       picleft: true,
     },
@@ -55,7 +55,7 @@ export class PortfolioComponent {
       descriptionDE: `Eine einfache Bibliothek, basierend auf der PokéAPI, welche
       Informationen über Pokemons liefert und katalogisiert.`,
       test: '',
-      github: '',
+      github: 'https://www.github.com/JoergHabermann/Pokedex',
       image: 'assets/img/pokedex.png',
       picleft: false,
     }    

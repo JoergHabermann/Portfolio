@@ -4,12 +4,13 @@ import { Component, HostListener, Renderer2 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollTriggerDirective } from '../../scroll-trigger.directive';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule,TranslateModule,NgIf,ScrollTriggerDirective,NgClass],
+  imports: [FormsModule,TranslateModule,NgIf,ScrollTriggerDirective,NgClass,RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

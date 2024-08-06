@@ -2,13 +2,13 @@
     <div>
         <div>
             <span>Jör<span>g</span></span>
-            <a href="legal">{{ 'footer-imprint' | translate }}</a>
+            <a [routerLink]="['/legal']">{{ 'footer-imprint' | translate }}</a>
         </div>
         <span>&copy; Jörg Habermann 2024</span>
         <div>
-            <a href="#"><img src="assets/img/github-button.svg" alt="github"></a>        
-            <a href="#"><img src="assets/img/email-button.svg" alt="mail"></a> 
-            <a href="#"><img src="assets/img/linkedin-button.svg" alt="linkedin"></a>
+            <a href="https://www.github.com/JoergHabermann" target="_blank"><img src="assets/img/github-button.svg" alt="github"></a>        
+            <a href="#contact"><img src="assets/img/email-button.svg" alt="mail"></a> 
+            <a href="https://www.linkedin.com/in/jörg-h-85b64a321" target="_blank"><img src="assets/img/linkedin-button.svg" alt="linkedin"></a>
         </div>
     </div>
 </footer>

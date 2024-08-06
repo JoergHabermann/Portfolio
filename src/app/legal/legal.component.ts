@@ -13,10 +13,9 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './legal.component.html',
   styleUrl: './legal.component.scss'
 })
-export class LegalComponent {
+export class LegalComponent  {
 
-  constructor(private translate: TranslateService) {   
-  }
+  constructor(private translate: TranslateService) {}  
 
   /**
    * Function to evaluate current Language

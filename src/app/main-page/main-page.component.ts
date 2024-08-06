@@ -31,7 +31,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class MainPageComponent {
   burgerstatus:boolean = false;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private translate: TranslateService) {}
 
   /**
    * switching burgerstatus boolean, as well as toggling document scroll ability

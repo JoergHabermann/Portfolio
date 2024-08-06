@@ -1,15 +1,14 @@
 import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-/* import { checkGerman } from '../portfolio/project/project.component'; */
 
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgIf,TranslateModule],
+  imports: [NgIf,TranslateModule,RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

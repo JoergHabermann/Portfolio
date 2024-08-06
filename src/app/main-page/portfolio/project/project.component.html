@@ -8,8 +8,8 @@
       <p *ngIf="!checkGerman()">{{ descriptionEN }}</p>
       <p *ngIf="checkGerman()">{{ descriptionDE }}</p>         
       <div class="buttonbucket">
-        <button>Live test</button>
-        <button>Github</button>
+        <a [href]="test" target="_blank"><button>Live test</button></a>
+        <a [href]="github" target="_blank"><button>Github</button></a>
       </div>
     </div>
     <div class="image-frame slide-right animate" *ngIf="!picleft">
