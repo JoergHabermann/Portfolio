@@ -48,12 +48,9 @@ export class ContactComponent {
    */
   onSubmit(ngForm: NgForm) {
     ngForm.control.markAllAsTouched();
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.sendBody(ngForm);  
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {      
-      this.mailSend = true;
-      this.renderer.addClass(document.body, 'no-scroll');
-    }
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.sendBody(ngForm);        
+    } 
   }
 
   /**
@@ -72,6 +69,7 @@ export class ContactComponent {
           complete: () => {
             console.info('send post complete');
             this.mailSend = true;
+            this.renderer.addClass(document.body, 'no-scroll');
           }
         });
   }
