@@ -6,11 +6,10 @@ import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { provideTranslation } from './app.component';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),
+  providers: [provideRouter(routes),provideHttpClient(),
               importProvidersFrom([
                 HttpClientModule,
                 TranslateModule.forRoot(provideTranslation())
-              ]),
-              provideHttpClient(),
+              ])              
   ]
 };

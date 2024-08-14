@@ -104,6 +104,14 @@ p {
     border: solid 4px $light-blue;
 }
 
+@media only screen and (min-width:1920px) {
+    .overflow-wrapper {
+        width: calc(((-1920px + 100vw)/2) + 300px);
+        max-width: 741px;        
+        left: calc(100% - 300px);
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .blueline {
         width: 130px;
@@ -141,13 +149,22 @@ p {
     .main {
         justify-content: flex-end;
         gap: 30%;
-        padding-left: 50px;
+        padding-left: 100px;
+    }
+    .text-container {
+        max-width: 800px;
     }
 }
 
 @media only screen and (max-width: 850px) {
     .main {
         gap: 20%;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .main {        
+        padding-left: 50px;
     }
 }
 
@@ -171,7 +188,7 @@ p {
 
 @media only screen and (max-width: 480px) {
     .main {
-        padding: 100px 0px 50px 15px;        
+        padding: 100px 0px 50px 25px;        
         gap: 2%;
     }
     .left-frame>h1 {

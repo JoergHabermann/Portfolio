@@ -75,6 +75,14 @@ h1 {
     }
 }
 
+@media only screen and (min-width:1920px) {
+    .second-image-wrapper {
+        width: calc(((-1920px + 100vw)/2) + 530px);
+        max-width: 977px;        
+        left: calc(100% - 530px);
+    }
+}
+
 @media only screen and (max-width: 1220px) {
     .projectcontainer {
         padding: 0;        
@@ -113,7 +121,7 @@ h1 {
     .projectcontainer {
         padding: 0;
         margin-top: 25px;
-        gap: 90px;
+        gap: 120px;
     }
     .first-image-wrapper {
         width: 100vw;

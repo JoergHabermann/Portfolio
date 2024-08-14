@@ -1,13 +1,14 @@
 @import '../../../styles.scss';
 
 header {
+    @include flexParams(center,center); 
     height: 109px;
-    background-color: $primary-color;
-    @include flexParams(center,flex-start);    
+    background-color: $primary-color;      
     >div {
         @include flexParams(center,space-between); 
         width: 100%;
-        padding: 0px 100px;
+        max-width: 1920px;        
+        padding: 0px 100px; 
         >a:first-child {
             text-decoration: none;
             >span {

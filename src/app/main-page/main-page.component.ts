@@ -33,6 +33,10 @@ export class MainPageComponent {
 
   constructor(private renderer: Renderer2, private translate: TranslateService) {}
 
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
+
   /**
    * switching burgerstatus boolean, as well as toggling document scroll ability
    */

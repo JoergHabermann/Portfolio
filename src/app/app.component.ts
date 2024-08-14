@@ -14,7 +14,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 export const provideTranslation = () => ({
-  defaultLanguage: 'en',
+  defaultLanguage: 'de',
   loader: {
     provide: TranslateLoader,
     useFactory: HttpLoaderFactory,
@@ -34,7 +34,7 @@ export class AppComponent {
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'de']);
-    translate.setDefaultLang('en'); 
+    translate.setDefaultLang('de'); 
     translate.currentLang = translate.defaultLang; 
   }  
 }

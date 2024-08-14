@@ -195,13 +195,14 @@ textarea {
 
   .image-wrapper {
     position: absolute;
+    right: calc((100vw - 500px)*-1);
     left: 0;
     bottom: 0;
-    width: 500px; 
+    width: 550px; 
     overflow: hidden;  
     >img {
       position:relative;
-      left: -350px;
+      right: 350px;      
       bottom: -420px; 
       transform: rotate(-100deg);
     }
@@ -242,6 +243,19 @@ textarea {
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+  @media only screen and (min-width:1920px) {    
+    .main {        
+        overflow: visible;
+    }
+    .image-wrapper {
+      width: calc(((-1920px + 100vw)/2) + 550px);             
+      left: calc(((-1920px + 100vw)/2) * -1);
+      >img {
+        right: calc(350px - ((-1920px + 100vw)/2))
+      }
+    }
+}
 
   @media only screen and (max-width:1350px) {
     .text-frame {

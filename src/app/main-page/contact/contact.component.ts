@@ -6,30 +6,34 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollTriggerDirective } from '../../scroll-trigger.directive';
 import { RouterModule } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule,TranslateModule,NgIf,ScrollTriggerDirective,NgClass,RouterModule],
+  imports: [
+    FormsModule,
+    TranslateModule,
+    NgIf,
+    ScrollTriggerDirective,
+    NgClass,
+    RouterModule,
+  ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
-
-
-export class ContactComponent {    
-
+export class ContactComponent {
   contactData = {
-    name: "",
-    email: "",
-    message: "",
-    acceptPolicy: false    
-  }
+    name: '',
+    email: '',
+    message: '',
+    acceptPolicy: false,
+  };
 
-  mailTest = true;
   mailSend = false;
 
+  constructor(private http: HttpClient, private renderer: Renderer2) {}
+
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://www.joerg-habermann.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -39,9 +43,6 @@ export class ContactComponent {
     },
   };
 
-  constructor(private http: HttpClient,private renderer: Renderer2) {    
-  }
-
   /**
    * Submit function checking validation and sending form as body
    * @param ngForm Formular Modul of Angular
@@ -49,29 +50,19 @@ export class ContactComponent {
   onSubmit(ngForm: NgForm) {
     ngForm.control.markAllAsTouched();
     if (ngForm.submitted && ngForm.form.valid) {
-      this.sendBody(ngForm);        
-    } 
-  }
-
-  /**
-   * function performing http post request
-   * @param ngForm Formular Modul of Angular
-   */
-  sendBody(ngForm: NgForm) {
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: () => {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+          next: (response) => {
             ngForm.resetForm();
           },
-          error: (error:string) => {
+          error: (error: string) => {
             console.error(error);
           },
-          complete: () => {
-            console.info('send post complete');
+          complete: () => {            
             this.mailSend = true;
             this.renderer.addClass(document.body, 'no-scroll');
-          }
+          },
         });
+    }
   }
 
   /**
@@ -81,7 +72,5 @@ export class ContactComponent {
   closeinfo() {
     this.mailSend = false;
     this.renderer.removeClass(document.body, 'no-scroll');
-  }  
-
+  }
 }
-

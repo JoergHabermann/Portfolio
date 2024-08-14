@@ -17,6 +17,10 @@ export class LegalComponent  {
 
   constructor(private translate: TranslateService) {}  
 
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
+
   /**
    * Function to evaluate current Language
    * @returns true if current set language is german

@@ -5,7 +5,7 @@
     position: relative; 
     min-height: 100vh;   
     width: 100%;
-    @include flexParams(flex-start,flex-start);
+    @include flexParams(center,center);
     flex-direction: column;       
 }
 
@@ -13,7 +13,8 @@
     @include flexParams(flex-start, flex-start);
     flex-direction: column;
     padding: 110px 100px; 
-    flex-grow: 1;    
+    flex-grow: 1;   
+    max-width: 1920px; 
 }
 
 a {
