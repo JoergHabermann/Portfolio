@@ -1,5 +1,5 @@
 import { NgClass, NgIf } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, HostListener, Renderer2 } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
     ScrollTriggerDirective,
     NgClass,
     RouterModule,
+    HttpClientModule
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',

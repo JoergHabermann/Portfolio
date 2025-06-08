@@ -24,6 +24,20 @@ interface Project {
 export class PortfolioComponent {
   projects: Project[] = [
     {
+      title: 'EvAct',
+      skills: 'Angular | Libraries | Plug-Ins | API | Material',
+      descriptionEN:`Activity finder in google-maps style. Find your favorite activity
+      at your location and track your route. Get information about opening hours, websites
+      and telephone numbers.`,
+      descriptionDE:`Eine App für Freizeit-Aktivitäten im Google-Maps Stil. Finde deine Lieblings-Aktivitäten
+      in deiner Nähe und erstelle Routen. Greife auf Informationen zu Öffnungszeiten, Webseiten und
+      Telefonnummern zu. `,
+      test: 'https://www.evact.joerg-habermann.de',
+      github: 'https://github.com/JoergHabermann/EvAct',
+      image: 'assets/img/evact-lap.png',
+      picleft: false,
+    },
+    {
       title: 'Join',
       skills: 'JavaScript | HTML | CSS | Firebase',
       descriptionEN:`Task manager inspired by the Kanban System. Create and organize tasks
@@ -33,7 +47,7 @@ export class PortfolioComponent {
       test: 'https://www.join.joerg-habermann.de',
       github: 'https://www.github.com/JoergHabermann/Join',
       image: 'assets/img/join.png',
-      picleft: false,
+      picleft: true,
     },
     {
       title: 'Sharkie',
@@ -45,7 +59,7 @@ export class PortfolioComponent {
       test: 'https://www.sharkie.joerg-habermann.de',
       github: 'https://www.github.com/JoergHabermann/sharkie',
       image: 'assets/img/sharkie.png',
-      picleft: true,
+      picleft: false,
     },
     {
       title: 'Pokédex',
@@ -57,7 +71,7 @@ export class PortfolioComponent {
       test: 'https://www.pokedex.joerg-habermann.de',
       github: 'https://www.github.com/JoergHabermann/Pokedex',
       image: 'assets/img/pokedex.png',
-      picleft: false,
+      picleft: true,
     }    
   ];
 }
