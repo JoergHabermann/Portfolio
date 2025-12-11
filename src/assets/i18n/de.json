@@ -3,14 +3,14 @@
     "above-cta":"Melde dich",
     "above-scroll":"hier scrollen",
 
-    "about-first":"Durch die Umsetzung von Einzel- und Gruppenprojekten habe ich fundierte Kenntnisse in Angular und JavaScript erworben. Die praxisorientierte Ausbildung bei der Developer Akademie ermöglichte es mir zudem, meiner Leidenschaft für die IT nachzugehen und meine Fähigkeit Probleme zu lösen weiter auszubauen.",
-    "about-bulb":"Ich entwickle maßgeschneiderte Web-Apps mit modernen Frameworks wie Angular - skalierbar, performant und nutzerzentriert.",
-    "about-puzzle":"Weiterhin bin ich mit git und der Arbeit in Teamprojekten vertraut. Diese Erfahrung ermöglicht es mir, nahtlos mit anderen Entwicklern zusammenzuarbeiten und gemeinsame Ziele effizient zu erreichen.",
+    "about-first":"Leidenschaft für Technologie, gepaart mit fundiertem Fachwissen: Das ist es, was mich antreibt. Als vielseitiger IT-Enthusiast habe ich die Fähigkeit entwickelt, digitale Herausforderungen in innovative Lösungen zu verwandeln.",
+    "about-bulb":"Egal ob Troubleshooting im Netzwerk oder eine maßgeschneiderte Webapp. Für jede Herausforderung finde ich die passende Lösung.",
+    "about-puzzle":"Weiterhin bin ich mit git und der Arbeit in Teamprojekten vertraut. Diese Erfahrung ermöglicht es mir, nahtlos mit anderen IT-Fachkräften zusammenzuarbeiten und gemeinsame Ziele effizient zu erreichen.",
 
-    "skills-text":"Durch den Ausbau meiner IT-Fähigkeiten, konnte ich einige einzigartige Projekte realisieren.",
+    "skills-text":"Der kontinuierliche Ausbau meiner IT-Fähigkeiten ermöglicht es mir, immer die passende Lösung zu finden.",
     "skills-cta":"Kontakt",
 
-    "portfolio-text":"Erforsche eine Auswahl meiner Arbeit - Tauche in meine Projekte ein und erlebe meine Skills live.",
+    "portfolio-text":"Erforsche eine Auswahl meiner Arbeit - Tauche in meine Projekte ein.",
     
     "contact-mark1":"Ich habe die",
     "contact-policy":"Datenschutzerklärung",
@@ -20,8 +20,8 @@
     "contact-mail":"E-Mail",
     "contact-message":"Nachricht",
     "contact-h2":"Ich habe dein Interesse geweckt?",
-    "contact-p":"Kontaktiere mich über das Formular, ich bin an deiner Nachricht interessiert und möchte zu deinen Projekten beitragen.",
-    "contact-need":"Brauchst du einen IT-Spezialisten?",
+    "contact-p":"Kontaktiere mich über das Formular, ich bin an deiner Nachricht interessiert und setze mich mit dir in Verbindung.",
+    "contact-need":"Du brauchst Hilfe bei einem IT-Projekt?",
     "contact-bold":"Kontaktiere mich!",
     "contact-mailsend":"Deine Mail wurde erfolgreich versendet!",
     "contact-valname":"Bitte gib einen Namen ein",

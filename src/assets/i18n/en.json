@@ -3,14 +3,14 @@
     "above-cta":"Let's talk",
     "above-scroll":"scroll down",
 
-    "about-first":"By working on individual and group projects, I have gained solid expertise in Angular and JavaScript. The hands-on training at Developer Akademie also allowed me to pursue my passion for IT and further enhance my problem-solving skills.",
-    "about-bulb":"I develop tailored web apps using modern frameworks like Angular - scalable, high-performance, and user-centric.",
-    "about-puzzle":"Furthermore, I am familiar with git and working on team projects. This experience enables me to collaborate seamlessly with other developers and achieve shared goals efficiently.",
-
-    "skills-text":"I have grown my IT-skills that have allowed me to create different real projects.",
+    "about-first":"Passion for technology, coupled with profound expertise: This is what drives me. As a versatile IT enthusiast, I have developed the ability to transform digital challenges into innovative solutions.",
+    "about-bulb":"Whether it's network troubleshooting or a tailored web app. I find the right solution for every challenge.",
+    "about-puzzle":"Furthermore, I am familiar with Git and working on team projects. This experience enables me to collaborate seamlessly with other IT professionals and achieve common goals efficiently.",
+  
+    "skills-text":"The continuous expansion of my IT skills allows me to always find the right solution.",
     "skills-cta":"Get in touch",
 
-    "portfolio-text":"Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "portfolio-text":"Explore a selection of my work here - Interact with my projects",
 
     "contact-mark1":"I've read the",
     "contact-policy":"privacy policy",
@@ -19,9 +19,9 @@
     "contact-name":"Your name",
     "contact-mail":"Your email",
     "contact-message":"Your message",
-    "contact-h2":"Got a problem to solve?",
-    "contact-p":"Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
-    "contact-need":"Need an IT-Specialist?",
+    "contact-h2":"Got a problem to solve?",    
+    "contact-p":"Contact me through this form. I am interested in your ideas, and will contact you back soon.",
+    "contact-need":"Need assistance with your IT-Project?",
     "contact-bold":"Contact me!",
     "contact-mailsend":"Your email has been sent successfully!",
     "contact-valname":"Please enter a name",
